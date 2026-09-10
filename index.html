@@ -125,8 +125,8 @@ html:not(.js-ready) [data-js-only],html:not(.js-ready) .advisor-step-grid,html:n
 :root{--motion-fast:160ms;--motion-ui:220ms;--motion-slow:420ms;--ease-ui:cubic-bezier(.2,.65,.3,1);--ease-emphasis:cubic-bezier(.22,1,.36,1);}
 section:not(.hero),footer{content-visibility:auto;contain-intrinsic-size:1px 720px;}
 a,button,.btn,.product-card,.case-study-card,.guide-card,.install-point-card,.install-region-tab,.trust-card{transition-property:color,background-color,border-color,box-shadow,opacity,transform;transition-duration:var(--motion-ui);transition-timing-function:var(--ease-ui);}
-.video-tile{transition:transform var(--motion-ui) var(--ease-ui),box-shadow var(--motion-ui) var(--ease-ui),border-color var(--motion-ui) var(--ease-ui);}
-.hero-slide-overview{background-image:linear-gradient(90deg,rgba(8,12,17,.72) 0%,rgba(8,12,17,.50) 36%,rgba(8,12,17,.12) 68%,rgba(8,12,17,.02) 100%),var(--hero-bg);background-size:100% 100%;background-position:center;background-repeat:no-repeat;}
+.video-tile{transition:0.2s ease-in-out!important;}
+.hero-slide-overview{background-image:linear-gradient(90deg,rgba(8,12,17,.72) 0%,rgba(8,12,17,.50) 36%,rgba(8,12,17,.12) 68%,rgba(8,12,17,.02) 100%),var(--hero-bg-mobile,var(--hero-bg));background-size:100% 100%;background-position:center;background-repeat:no-repeat;}
 .hero-carousel-slide{background-size:100% 100%!important;background-position:center!important;background-repeat:no-repeat!important;}
 .hero-carousel-copy h1,.hero-carousel-copy h2{font-size:clamp(40px,4.4vw,60px);line-height:1.05;letter-spacing:-1.8px;}
 .hero-carousel-copy>p{font-size:15px;line-height:1.65!important;}
