@@ -249,6 +249,7 @@ button:not(:disabled),.btn,a{will-change:auto;touch-action:manipulation;}
 <label><input name="af-feature" type="checkbox" value="hdr"/> HDR</label>
 <label><input name="af-feature" type="checkbox" value="starvis2"/> Sony STARVIS 2</label>
 <label><input name="af-feature" type="checkbox" value="wifi6"/> Wi‑Fi 6</label>
+<label><input name="af-feature" type="checkbox" value="speedeye"/> A800SE SpeedEye</label>
 </fieldset>
 <fieldset class="filter-group">
 <legend>Trạng thái</legend>
@@ -541,7 +542,7 @@ function filterMetaFor(p){
   const t=normalizeFilterText(Object.values(p?.pdpSpecs||{}).join(' '));
   const compact=t.replace(/[^a-z0-9]+/g,' ');
   return {frontResolution:filterFrontResolution(p),gps:filterSpecKnown(filterSpecValue(p,'gps'))&&normalizeFilterText(filterSpecValue(p,'gps')).includes('gps'),
-    hdr:/(^|\s)hdr(\s|$)/.test(compact),starvis2:/starvis\s*2/.test(compact),wifi6:/\bwi\s*fi\s*6\b/.test(compact),
+    hdr:/(^|\s)hdr(\s|$)/.test(compact),starvis2:/starvis\s*2/.test(compact),wifi6:/\bwi\s*fi\s*6\b/.test(compact),speedeye:p.id==='a800se',
     statuses:[...(p?.statusTags||[]),p?.salesStatus||'active',...(packagesFor(p).every(k=>k.price===null)?['contact']:[])]};
 }
 function productMatchesAdvancedFilters(p,advanced={},tab='all'){
@@ -1278,4 +1279,19 @@ window.addEventListener('hashchange',revealHashAnswer);revealHashAnswer();
 }
 
 
-})();</script></body></html>
+})();</script><script>
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('a[href="https://auto365.vn/vinfast-vf6-plus-2025-lap-70mai-4k-a810s"]').forEach(a=>{
+    if(a.textContent.includes('cấu hình A810S'))a.href='https://auto365.vn/camera-hanh-trinh-70mai-4k-a810s';
+  });
+  document.querySelectorAll('time[datetime="2026-09-09"]').forEach(time=>{
+    time.dateTime='2026-09-10';
+    time.textContent='10/09/2026';
+  });
+  document.querySelectorAll('script[type="application/ld+json"]').forEach(script=>{
+    script.textContent=script.textContent.replaceAll('2026-09-09','2026-09-10');
+  });
+  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
+  while(walker.nextNode())walker.currentNode.nodeValue=walker.currentNode.nodeValue.replaceAll('09/09/2026','10/09/2026');
+});
+</script></body></html>
