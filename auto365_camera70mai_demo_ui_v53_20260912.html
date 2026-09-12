@@ -2601,7 +2601,7 @@
     }
 
     .hero {
-      min-height: 560px;
+      min-height: 0;
       background:
         linear-gradient(90deg, rgba(10, 13, 18, .82) 0%, rgba(10, 13, 18, .60) 34%, rgba(10, 13, 18, .22) 66%, rgba(10, 13, 18, .08) 100%);
     }
@@ -2801,7 +2801,7 @@
 
     .hero.hero-carousel {
       position: relative;
-      min-height: 560px;
+      min-height: 0;
       background: #0e1318;
       overflow: hidden;
       color: #fff;
@@ -2809,7 +2809,7 @@
 
     .hero-carousel-track {
       position: relative;
-      min-height: 560px;
+      min-height: 0;
     }
 
     .hero-carousel-slide {
@@ -2857,7 +2857,7 @@
     .hero-carousel-content {
       position: relative;
       z-index: 4;
-      min-height: 560px;
+      min-height: 0;
       display: flex;
       align-items: center;
       padding-top: 70px;
@@ -3031,7 +3031,7 @@
 
       .hero.hero-carousel,
       .hero-carousel-track {
-        min-height: 640px;
+        min-height: 0;
       }
 
       .hero-carousel-slide {
@@ -3061,16 +3061,16 @@
 
     @media (max-width:760px) {
       .hero.hero-carousel {
-        min-height: 600px;
+        min-height: 0;
         touch-action: pan-y;
       }
 
       .hero-carousel-track {
-        min-height: 600px;
+        min-height: 0;
       }
 
       .hero-carousel-slide {
-        min-height: 600px;
+        min-height: 0;
         background-size: contain;
         background-repeat: no-repeat;
         background-image:
@@ -3106,7 +3106,7 @@
       }
 
       .hero-carousel-content {
-        min-height: 600px;
+        min-height: 0;
         padding-top: 58px;
         padding-bottom: 56px;
         align-items: flex-start;
@@ -3248,11 +3248,11 @@
       .hero.hero-carousel,
       .hero-carousel-track,
       .hero-carousel-slide {
-        min-height: 590px;
+        min-height: 0;
       }
 
       .hero-carousel-content {
-        min-height: 590px;
+        min-height: 0;
         padding-left: 0;
         padding-right: 0;
       }
@@ -6322,11 +6322,43 @@
 
     .hero-media { position: absolute; inset: 0; z-index: 0; overflow: hidden; background: #080c11; }
 
-    .hero-media img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center; }
+    .hero-media img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
 
     .hero-carousel-content { position: relative; z-index: 2; }
 
     @media (max-width: 760px) { .case-brand-filters { margin-top: 14px; margin-bottom: 16px; } }
+
+    /* Canonical Hero media and responsive aspect ratios. */
+    .hero.hero-carousel, .hero-carousel-track {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1920 / 720;
+      min-height: 0;
+      overflow: hidden;
+      background: #080c11;
+    }
+
+    .hero-carousel-slide {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: none !important;
+    }
+
+    .hero-media { position: absolute; inset: 0; display: block; width: 100%; height: 100%; z-index: 0; overflow: hidden; background: #080c11; }
+
+    .hero-media img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+
+    .hero-carousel-slide::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(90deg, rgba(8,12,17,.46) 0%, rgba(8,12,17,.22) 38%, rgba(8,12,17,.04) 68%, rgba(8,12,17,0) 100%); }
+
+    .hero-carousel-content { position: relative; z-index: 2; height: 100%; min-height: 0; }
+
+    @media (max-width: 760px) {
+      .hero.hero-carousel, .hero-carousel-track { aspect-ratio: 1080 / 1620; min-height: 0; }
+      .hero-carousel-slide, .hero-carousel-content { height: 100%; min-height: 0; }
+    }
 </style>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
@@ -6347,7 +6379,7 @@
 <nav aria-label="Breadcrumb" class="hero-carousel-breadcrumb wrap"><a href="https://auto365.vn/">Auto365</a><span>›</span><a href="https://auto365.vn/camera-hanh-trinh-o-to">Camera
           hành trình ô tô</a><span>›</span><b>70mai</b></nav>
 <div class="hero-carousel-track" id="hero-carousel-track">
-<article aria-hidden="false" class="hero-carousel-slide is-active hero-slide-overview" data-hero-slide="0"><picture class="hero-media"><source media="(max-width:760px)" srcset="https://raw.githubusercontent.com/NgocTrinh2026/preview-70mai/main/70mai-banner-70mai-overview-mobile.webp"/><img src="https://raw.githubusercontent.com/NgocTrinh2026/preview-70mai/main/70mai-banner-70mai-overview-desktop.webp" alt="" width="1512" height="569" fetchpriority="high" decoding="async"/></picture>
+<article aria-hidden="false" class="hero-carousel-slide is-active hero-slide-overview" data-hero-slide="0"><picture class="hero-media"><source media="(max-width:760px)" srcset="https://raw.githubusercontent.com/NgocTrinh2026/preview-70mai/main/70mai-banner-70mai-overview-mobile.webp"/><img src="https://raw.githubusercontent.com/NgocTrinh2026/preview-70mai/main/70mai-banner-70mai-overview-desktop.webp" alt="" width="1920" height="720" fetchpriority="high" decoding="async"/></picture>
 <div class="wrap hero-carousel-content">
 <div class="hero-carousel-copy">
 <div class="eyebrow">Camera hành trình 70mai tại Auto365</div>
@@ -6363,7 +6395,7 @@
 </div>
 </div>
 </article>
-<article aria-hidden="true" class="hero-carousel-slide hero-slide-product" data-hero-slide="1"><picture class="hero-media"><source media="(max-width:760px)" srcset="https://raw.githubusercontent.com/NgocTrinh2026/preview-70mai/main/70mai-banner-70mai-a510-mobile.webp"/><img src="https://raw.githubusercontent.com/NgocTrinh2026/preview-70mai/main/70mai-banner-70mai-a510-desktop.webp" alt="" width="1512" height="569" loading="lazy" decoding="async"/></picture>
+<article aria-hidden="true" class="hero-carousel-slide hero-slide-product" data-hero-slide="1"><picture class="hero-media"><source media="(max-width:760px)" srcset="https://raw.githubusercontent.com/NgocTrinh2026/preview-70mai/main/70mai-banner-70mai-a510-mobile.webp"/><img src="https://raw.githubusercontent.com/NgocTrinh2026/preview-70mai/main/70mai-banner-70mai-a510-desktop.webp" alt="" width="1920" height="720" loading="lazy" decoding="async"/></picture>
 <div class="wrap hero-carousel-content">
 <div class="hero-carousel-copy product-copy">
 <div class="eyebrow">3K · STARVIS 2 · HDR</div>
@@ -6376,7 +6408,7 @@
 </div>
 </div>
 </article>
-<article aria-hidden="true" class="hero-carousel-slide hero-slide-product" data-hero-slide="2"><picture class="hero-media"><source media="(max-width:760px)" srcset="https://raw.githubusercontent.com/NgocTrinh2026/preview-70mai/main/70mai-banner-70mai-a810-lite-mobile.webp"/><img src="https://raw.githubusercontent.com/NgocTrinh2026/preview-70mai/main/70mai-banner-70mai-a810-lite-desktop.webp" alt="" width="1512" height="569" loading="lazy" decoding="async"/></picture>
+<article aria-hidden="true" class="hero-carousel-slide hero-slide-product" data-hero-slide="2"><picture class="hero-media"><source media="(max-width:760px)" srcset="https://raw.githubusercontent.com/NgocTrinh2026/preview-70mai/main/70mai-banner-70mai-a810-lite-mobile.webp"/><img src="https://raw.githubusercontent.com/NgocTrinh2026/preview-70mai/main/70mai-banner-70mai-a810-lite-desktop.webp" alt="" width="1920" height="720" loading="lazy" decoding="async"/></picture>
 <div class="wrap hero-carousel-content">
 <div class="hero-carousel-copy product-copy">
 <div class="eyebrow">4K HDR · ADAS · Trước + sau</div>
@@ -6389,7 +6421,7 @@
 </div>
 </div>
 </article>
-<article aria-hidden="true" class="hero-carousel-slide hero-slide-product" data-hero-slide="3"><picture class="hero-media"><source media="(max-width:760px)" srcset="https://raw.githubusercontent.com/NgocTrinh2026/preview-70mai/main/70mai-banner-70mai-t400-mobile.webp"/><img src="https://raw.githubusercontent.com/NgocTrinh2026/preview-70mai/main/70mai-banner-70mai-t400-desktop.webp" alt="" width="1512" height="569" loading="lazy" decoding="async"/></picture>
+<article aria-hidden="true" class="hero-carousel-slide hero-slide-product" data-hero-slide="3"><picture class="hero-media"><source media="(max-width:760px)" srcset="https://raw.githubusercontent.com/NgocTrinh2026/preview-70mai/main/70mai-banner-70mai-t400-mobile.webp"/><img src="https://raw.githubusercontent.com/NgocTrinh2026/preview-70mai/main/70mai-banner-70mai-t400-desktop.webp" alt="" width="1920" height="720" loading="lazy" decoding="async"/></picture>
 <div class="wrap hero-carousel-content">
 <div class="hero-carousel-copy product-copy">
 <div class="eyebrow">3 kênh · Trước + sau + cabin</div>
