@@ -1430,7 +1430,7 @@
 }
 
     .hero {
-      background-size: cover;
+      background-size: contain;
       background-position: center center;
       background-repeat: no-repeat;
     }
@@ -2820,7 +2820,7 @@
       pointer-events: none;
       transition: opacity var(--motion-slow) var(--ease-ui);
       background-image: linear-gradient(90deg, rgba(8, 12, 17, .88) 0%, rgba(8, 12, 17, .70) 38%, rgba(8, 12, 17, .20) 68%, rgba(8, 12, 17, .08) 100%), var(--hero-bg);
-      background-size: cover;
+      background-size: contain;
       background-position: center;
       z-index: 1;
     }
@@ -3071,7 +3071,7 @@
 
       .hero-carousel-slide {
         min-height: 600px;
-        background-size: cover;
+        background-size: contain;
         background-repeat: no-repeat;
         background-image:
           linear-gradient(180deg, rgba(7, 11, 16, .72) 0%, rgba(7, 11, 16, .48) 34%, rgba(7, 11, 16, .34) 57%, rgba(7, 11, 16, .82) 100%),
@@ -3915,7 +3915,7 @@
       scrollbar-width: none;
       -webkit-overflow-scrolling: touch;
       scroll-behavior: smooth;
-      padding: 2px 0 5px;
+      padding: 0 0 5px;
       cursor: grab
     }
 
@@ -6005,7 +6005,7 @@
 
     .hero-slide-overview {
       background-image: linear-gradient(90deg, rgba(8, 12, 17, .72) 0%, rgba(8, 12, 17, .50) 36%, rgba(8, 12, 17, .12) 68%, rgba(8, 12, 17, .02) 100%), var(--hero-bg);
-      background-size: cover;
+      background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
     }
@@ -6021,7 +6021,7 @@
     }
 
     .hero-carousel-slide {
-      background-size: cover !important;
+      background-size: contain !important;
       background-position: center !important;
       background-repeat: no-repeat !important;
     }
@@ -6299,32 +6299,9 @@
         height: auto !important;
         aspect-ratio: 16 / 9 !important;
       }
-    }    /* v41: prevent flex shrinking and keep every case frame at the same ratio. */
-    .case-study-media {
-      flex: 0 0 auto !important;
-      width: 100% !important;
-      aspect-ratio: 16 / 9 !important;
-      height: auto !important;
-      min-height: 0 !important;
-    }
-    .case-studies-head { margin-bottom: 8px !important; }
-    @media (max-width: 760px) {
-      .case-study-media {
-        flex-basis: auto !important;
-        aspect-ratio: 16 / 9 !important;
-      }
-    }    /* v43: let the grid size itself to the equalized card content, without spacer rows. */
-    .case-study-viewport {
-      padding: 0 0 2px !important;
-    }
-    @media (min-width: 981px) {
-      .case-study-track,
-      .case-study-track.is-filtered {
-        grid-template-rows: repeat(2, max-content) !important;
-      }
     }
     /* Canonical case layout. */
-    .case-brand-filters { display: flex; flex-wrap: nowrap; align-items: stretch; gap: 8px; width: 100%; overflow-x: auto; scrollbar-width: none; }
+    .case-brand-filters { display: flex; flex-wrap: nowrap; align-items: center; gap: 8px; width: 100%; overflow-x: auto; scrollbar-width: none; margin-top: 18px; margin-bottom: 20px; }
     .case-brand-filters::-webkit-scrollbar { display: none; }
     .case-brand-filters button { width: auto; flex: 0 0 auto; }
     @media (min-width: 981px) {
@@ -6336,6 +6313,20 @@
 .case-study-track.is-filtered { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: none; grid-auto-flow: row; grid-auto-columns: auto; gap: 14px 16px; width: 100%; }
     }
 
+
+    .hero-carousel-slide {
+      overflow: hidden;
+      background-image: none !important;
+      background-color: #080c11;
+    }
+
+    .hero-media { position: absolute; inset: 0; z-index: 0; overflow: hidden; background: #080c11; }
+
+    .hero-media img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center; }
+
+    .hero-carousel-content { position: relative; z-index: 2; }
+
+    @media (max-width: 760px) { .case-brand-filters { margin-top: 14px; margin-bottom: 16px; } }
 </style>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
@@ -6356,7 +6347,7 @@
 <nav aria-label="Breadcrumb" class="hero-carousel-breadcrumb wrap"><a href="https://auto365.vn/">Auto365</a><span>›</span><a href="https://auto365.vn/camera-hanh-trinh-o-to">Camera
           hành trình ô tô</a><span>›</span><b>70mai</b></nav>
 <div class="hero-carousel-track" id="hero-carousel-track">
-<article aria-hidden="false" class="hero-carousel-slide is-active hero-slide-overview" data-hero-slide="0">
+<article aria-hidden="false" class="hero-carousel-slide is-active hero-slide-overview" data-hero-slide="0"><picture class="hero-media"><source media="(max-width:760px)" srcset="https://raw.githubusercontent.com/NgocTrinh2026/preview-70mai/main/70mai-banner-70mai-overview-mobile.webp"/><img src="https://raw.githubusercontent.com/NgocTrinh2026/preview-70mai/main/70mai-banner-70mai-overview-desktop.webp" alt="" width="1512" height="569" fetchpriority="high" decoding="async"/></picture>
 <div class="wrap hero-carousel-content">
 <div class="hero-carousel-copy">
 <div class="eyebrow">Camera hành trình 70mai tại Auto365</div>
@@ -6372,7 +6363,7 @@
 </div>
 </div>
 </article>
-<article aria-hidden="true" class="hero-carousel-slide hero-slide-product" data-hero-slide="1">
+<article aria-hidden="true" class="hero-carousel-slide hero-slide-product" data-hero-slide="1"><picture class="hero-media"><source media="(max-width:760px)" srcset="https://raw.githubusercontent.com/NgocTrinh2026/preview-70mai/main/70mai-banner-70mai-a510-mobile.webp"/><img src="https://raw.githubusercontent.com/NgocTrinh2026/preview-70mai/main/70mai-banner-70mai-a510-desktop.webp" alt="" width="1512" height="569" loading="lazy" decoding="async"/></picture>
 <div class="wrap hero-carousel-content">
 <div class="hero-carousel-copy product-copy">
 <div class="eyebrow">3K · STARVIS 2 · HDR</div>
@@ -6385,7 +6376,7 @@
 </div>
 </div>
 </article>
-<article aria-hidden="true" class="hero-carousel-slide hero-slide-product" data-hero-slide="2">
+<article aria-hidden="true" class="hero-carousel-slide hero-slide-product" data-hero-slide="2"><picture class="hero-media"><source media="(max-width:760px)" srcset="https://raw.githubusercontent.com/NgocTrinh2026/preview-70mai/main/70mai-banner-70mai-a810-lite-mobile.webp"/><img src="https://raw.githubusercontent.com/NgocTrinh2026/preview-70mai/main/70mai-banner-70mai-a810-lite-desktop.webp" alt="" width="1512" height="569" loading="lazy" decoding="async"/></picture>
 <div class="wrap hero-carousel-content">
 <div class="hero-carousel-copy product-copy">
 <div class="eyebrow">4K HDR · ADAS · Trước + sau</div>
@@ -6398,7 +6389,7 @@
 </div>
 </div>
 </article>
-<article aria-hidden="true" class="hero-carousel-slide hero-slide-product" data-hero-slide="3">
+<article aria-hidden="true" class="hero-carousel-slide hero-slide-product" data-hero-slide="3"><picture class="hero-media"><source media="(max-width:760px)" srcset="https://raw.githubusercontent.com/NgocTrinh2026/preview-70mai/main/70mai-banner-70mai-t400-mobile.webp"/><img src="https://raw.githubusercontent.com/NgocTrinh2026/preview-70mai/main/70mai-banner-70mai-t400-desktop.webp" alt="" width="1512" height="569" loading="lazy" decoding="async"/></picture>
 <div class="wrap hero-carousel-content">
 <div class="hero-carousel-copy product-copy">
 <div class="eyebrow">3 kênh · Trước + sau + cabin</div>
