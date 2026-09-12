@@ -1429,11 +1429,6 @@
 
 }
 
-    .hero {
-      background-size: contain;
-      background-position: center center;
-      background-repeat: no-repeat;
-    }
 
     @media (min-width:981px) {
       .video-stack {
@@ -2645,7 +2640,7 @@
 
     @media (max-width:760px) {
       .hero {
-        min-height: 520px;
+        min-height: 0;
         background-position: 60% center;
       }
 
@@ -2819,8 +2814,6 @@
       visibility: hidden;
       pointer-events: none;
       transition: opacity var(--motion-slow) var(--ease-ui);
-      background-image: linear-gradient(90deg, rgba(8, 12, 17, .88) 0%, rgba(8, 12, 17, .70) 38%, rgba(8, 12, 17, .20) 68%, rgba(8, 12, 17, .08) 100%), var(--hero-bg);
-      background-size: contain;
       background-position: center;
       z-index: 1;
     }
@@ -3055,10 +3048,6 @@
       }
     }
 
-    .hero-slide-overview {
-      background-position: center center;
-    }
-
     @media (max-width:760px) {
       .hero.hero-carousel {
         min-height: 0;
@@ -3071,15 +3060,7 @@
 
       .hero-carousel-slide {
         min-height: 0;
-        background-size: contain;
         background-repeat: no-repeat;
-        background-image:
-          linear-gradient(180deg, rgba(7, 11, 16, .72) 0%, rgba(7, 11, 16, .48) 34%, rgba(7, 11, 16, .34) 57%, rgba(7, 11, 16, .82) 100%),
-          var(--hero-bg);
-      }
-
-      .hero-slide-overview {
-        background-position: 61% center;
       }
 
       .hero-carousel-slide[data-hero-slide="1"] {
@@ -5972,23 +5953,15 @@
       color: #fff;
     }
     .hero-carousel-slide[data-hero-slide="0"] {
-      --hero-bg: url("https://raw.githubusercontent.com/NgocTrinh2026/preview-70mai/main/70mai-banner-70mai-overview-desktop.webp") !important;
-      --hero-bg-mobile: url("https://raw.githubusercontent.com/NgocTrinh2026/preview-70mai/main/70mai-banner-70mai-overview-mobile.webp") !important;
     }
 
     .hero-carousel-slide[data-hero-slide="1"] {
-      --hero-bg: url("https://raw.githubusercontent.com/NgocTrinh2026/preview-70mai/main/70mai-banner-70mai-a510-desktop.webp") !important;
-      --hero-bg-mobile: url("https://raw.githubusercontent.com/NgocTrinh2026/preview-70mai/main/70mai-banner-70mai-a510-mobile.webp") !important;
     }
 
     .hero-carousel-slide[data-hero-slide="2"] {
-      --hero-bg: url("https://raw.githubusercontent.com/NgocTrinh2026/preview-70mai/main/70mai-banner-70mai-a810-lite-desktop.webp") !important;
-      --hero-bg-mobile: url("https://raw.githubusercontent.com/NgocTrinh2026/preview-70mai/main/70mai-banner-70mai-a810-lite-mobile.webp") !important;
     }
 
     .hero-carousel-slide[data-hero-slide="3"] {
-      --hero-bg: url("https://raw.githubusercontent.com/NgocTrinh2026/preview-70mai/main/70mai-banner-70mai-t400-desktop.webp") !important;
-      --hero-bg-mobile: url("https://raw.githubusercontent.com/NgocTrinh2026/preview-70mai/main/70mai-banner-70mai-t400-mobile.webp") !important;
     }
 #videos,
     #case-studies,
@@ -6003,28 +5976,14 @@
       transition: transform var(--motion-ui) var(--ease-ui), box-shadow var(--motion-ui) var(--ease-ui);
     }
 
-    .hero-slide-overview {
-      background-image: linear-gradient(90deg, rgba(8, 12, 17, .72) 0%, rgba(8, 12, 17, .50) 36%, rgba(8, 12, 17, .12) 68%, rgba(8, 12, 17, .02) 100%), var(--hero-bg);
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
     @media(max-width:760px) {
       .hero-carousel-slide {
-        background-image: linear-gradient(180deg, rgba(7, 11, 16, .72) 0%, rgba(7, 11, 16, .48) 34%, rgba(7, 11, 16, .34) 57%, rgba(7, 11, 16, .82) 100%), var(--hero-bg-mobile, var(--hero-bg)) !important;
       }
 
       .hero-slide-overview {
-        background-image: linear-gradient(90deg, rgba(8, 12, 17, .72) 0%, rgba(8, 12, 17, .50) 36%, rgba(8, 12, 17, .12) 68%, rgba(8, 12, 17, .02) 100%), var(--hero-bg-mobile, var(--hero-bg)) !important;
       }
     }
 
-    .hero-carousel-slide {
-      background-size: contain !important;
-      background-position: center !important;
-      background-repeat: no-repeat !important;
-    }
 
     .hero-carousel-copy h1,
     .hero-carousel-copy h2 {
