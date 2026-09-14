@@ -6250,7 +6250,134 @@
       .hero.hero-carousel, .hero-carousel-track { aspect-ratio: 1080 / 1620; min-height: 0; }
       .hero-carousel-slide, .hero-carousel-content { height: 100%; min-height: 0; }
     }
-</style>
+
+    .install-process-section {
+      padding: 52px 0 56px;
+    }
+
+    .install-process-list {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 16px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .install-process-step {
+      position: relative;
+      min-width: 0;
+      padding: 18px 14px 16px;
+      border: 1px solid #e5e7eb;
+      background: #fff;
+      transition: transform var(--motion-ui) var(--ease-ui), border-color var(--motion-ui) var(--ease-ui), box-shadow var(--motion-ui) var(--ease-ui);
+    }
+
+    .install-process-step:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 31px;
+      right: -17px;
+      width: 17px;
+      border-top: 1px solid #d8dcdf;
+    }
+
+    .install-process-number {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--red);
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .install-process-icon {
+      display: block;
+      width: 24px;
+      height: 24px;
+      margin-bottom: 12px;
+      color: var(--red);
+      font-size: 22px;
+      line-height: 24px;
+    }
+
+    .install-process-icon svg {
+      display: block;
+      width: 24px;
+      height: 24px;
+    }
+
+    .install-process-step h3 {
+      margin: 0 0 8px;
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1.3;
+    }
+
+    .install-process-step p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .install-process-note {
+      margin: 18px 0 0;
+      padding-left: 10px;
+      border-left: 2px solid var(--red);
+      color: var(--text-muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    @media (hover:hover) and (pointer:fine) {
+      .install-process-step:hover {
+        transform: translateY(-2px);
+        border-color: #cfd4d8;
+        box-shadow: 0 6px 16px rgba(16, 19, 25, .06);
+      }
+    }
+
+    @media (max-width:1099px) {
+      .install-process-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        row-gap: 16px;
+      }
+
+      .install-process-step:nth-child(3)::after,
+      .install-process-step:nth-child(6)::after {
+        display: none;
+      }
+    }
+
+    @media (max-width:767px) {
+      .install-process-section {
+        padding: 44px 0 48px;
+      }
+
+      .install-process-list {
+        display: flex;
+        gap: 12px;
+        margin-right: -16px;
+        padding-right: 16px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+      }
+
+      .install-process-list::-webkit-scrollbar {
+        display: none;
+      }
+
+      .install-process-step {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+      }
+
+      .install-process-step::after {
+        display: none;
+      }
+    }</style>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 </head>
@@ -6987,37 +7114,6 @@
 </div>
 </div>
 </section>
-<section class="install-cost-section" id="lap-dat">
-<div class="wrap install-cost-grid">
-<div class="install-cost-copy">
-<div class="eyebrow">Chi phí lắp camera 70mai</div>
-<h2>Chi phí lắp camera 70mai gồm những gì?</h2>
-<div class="install-cost-actions">
-<button class="btn btn-red" data-js-only="" id="open-current-config" type="button">Xem cấu hình đã
-              chọn</button>
-<a class="btn install-quote-btn" href="https://zalo.me/3622666363345050913" rel="noopener noreferrer" target="_blank">Nhận báo giá chi tiết</a>
-</div>
-</div>
-<div class="install-cost-list">
-<article class="install-cost-item install-cost-confirmed">
-<span>01</span>
-<div><b>Bộ camera đã chọn</b><small>Đúng model và số hướng ghi hình</small></div><strong>GIÁ BỘ</strong>
-</article>
-<article class="install-cost-item">
-<span>02</span>
-<div><b>Camera bổ sung</b><small>Chỉ tính khi chưa nằm trong bộ</small></div><strong>NẾU CẦN</strong>
-</article>
-<article class="install-cost-item">
-<span>03</span>
-<div><b>Bộ nguồn và lưu trữ</b><small>Chọn theo nhu cầu sử dụng</small></div><strong>THEO BỘ</strong>
-</article>
-<article class="install-cost-item">
-<span>04</span>
-<div><b>Công lắp và VAT</b><small>Xác nhận trong báo giá trước khi lắp</small></div><strong>BÁO RÕ</strong>
-</article>
-</div>
-</div>
-</section>
 <section aria-labelledby="install-location-title" class="location-network-v2" id="lap-dat-theo-khu-vuc">
 <div class="wrap">
 <header class="location-v2-head">
@@ -7163,7 +7259,57 @@
 </div>
 </div>
 </section>
-<section class="section" id="guide">
+<section class="install-cost-section" id="lap-dat">
+<div class="wrap install-cost-grid">
+<div class="install-cost-copy">
+<div class="eyebrow">Chi phí lắp camera 70mai</div>
+<h2>Chi phí lắp camera 70mai gồm những gì?</h2>
+<div class="install-cost-actions">
+<button class="btn btn-red" data-js-only="" id="open-current-config" type="button">Xem cấu hình đã
+              chọn</button>
+<a class="btn install-quote-btn" href="https://zalo.me/3622666363345050913" rel="noopener noreferrer" target="_blank">Nhận báo giá chi tiết</a>
+</div>
+</div>
+<div class="install-cost-list">
+<article class="install-cost-item install-cost-confirmed">
+<span>01</span>
+<div><b>Bộ camera đã chọn</b><small>Đúng model và số hướng ghi hình</small></div><strong>GIÁ BỘ</strong>
+</article>
+<article class="install-cost-item">
+<span>02</span>
+<div><b>Camera bổ sung</b><small>Chỉ tính khi chưa nằm trong bộ</small></div><strong>NẾU CẦN</strong>
+</article>
+<article class="install-cost-item">
+<span>03</span>
+<div><b>Bộ nguồn và lưu trữ</b><small>Chọn theo nhu cầu sử dụng</small></div><strong>THEO BỘ</strong>
+</article>
+<article class="install-cost-item">
+<span>04</span>
+<div><b>Công lắp và VAT</b><small>Xác nhận trong báo giá trước khi lắp</small></div><strong>BÁO RÕ</strong>
+</article>
+</div>
+</div>
+</section>
+
+<section class="install-process-section" id="quy-trinh-lap-camera-70mai">
+<div class="wrap">
+<div class="section-head">
+<div>
+<div class="eyebrow">QUY TRÌNH THI CÔNG</div>
+<h2>Quy trình lắp camera 70mai tại Auto365</h2>
+</div>
+</div>
+<ol class="install-process-list">
+<li class="install-process-step"><span class="install-process-number">01</span><span class="install-process-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 3v4m0 10v4M3 12h4m10 0h4M5.64 5.64l2.83 2.83m7.06 7.06 2.83 2.83m0-12.72-2.83 2.83m-7.06 7.06-2.83 2.83" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"/><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span><h3>Xác nhận nhu cầu và cấu hình</h3><p>Kiểm tra model, số kênh, camera sau, thẻ nhớ, bộ nguồn và các phụ kiện cần dùng theo cấu hình đã chọn.</p></li>
+<li class="install-process-step"><span class="install-process-number">02</span><span class="install-process-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 3v4m0 10v4M3 12h4m10 0h4M5.64 5.64l2.83 2.83m7.06 7.06 2.83 2.83m0-12.72-2.83 2.83m-7.06 7.06-2.83 2.83" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"/><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span><h3>Kiểm tra vị trí lắp trên xe</h3><p>Xác định vị trí camera trước, camera sau hoặc cabin phù hợp với từng dòng xe và hạn chế ảnh hưởng tầm nhìn.</p></li>
+<li class="install-process-step"><span class="install-process-number">03</span><span class="install-process-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 3v4m0 10v4M3 12h4m10 0h4M5.64 5.64l2.83 2.83m7.06 7.06 2.83 2.83m0-12.72-2.83 2.83m-7.06 7.06-2.83 2.83" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"/><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span><h3>Đi dây và kết nối nguồn</h3><p>Bố trí dây theo cấu hình thực tế của xe. Nếu cần Parking Mode, kỹ thuật viên kiểm tra bộ nguồn hoặc Hardwire Kit tương thích trước khi đấu nối.</p></li>
+<li class="install-process-step"><span class="install-process-number">04</span><span class="install-process-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 3v4m0 10v4M3 12h4m10 0h4M5.64 5.64l2.83 2.83m7.06 7.06 2.83 2.83m0-12.72-2.83 2.83m-7.06 7.06-2.83 2.83" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"/><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span><h3>Lắp camera và căn góc quay</h3><p>Cố định thiết bị và căn chỉnh vùng ghi hình phía trước, phía sau hoặc cabin theo cấu hình camera.</p></li>
+<li class="install-process-step"><span class="install-process-number">05</span><span class="install-process-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 3v4m0 10v4M3 12h4m10 0h4M5.64 5.64l2.83 2.83m7.06 7.06 2.83 2.83m0-12.72-2.83 2.83m-7.06 7.06-2.83 2.83" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"/><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span><h3>Cài đặt và kiểm tra hệ thống</h3><p>Kiểm tra hình ảnh từng camera, Wi-Fi, ứng dụng, GPS và các tính năng có trên đúng model được lắp.</p></li>
+<li class="install-process-step"><span class="install-process-number">06</span><span class="install-process-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 3v4m0 10v4M3 12h4m10 0h4M5.64 5.64l2.83 2.83m7.06 7.06 2.83 2.83m0-12.72-2.83 2.83m-7.06 7.06-2.83 2.83" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"/><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span><h3>Bàn giao và hướng dẫn sử dụng</h3><p>Kiểm tra ghi và phát lại video, ngày giờ, bộ nhớ và Parking Mode nếu có; sau đó hướng dẫn khách các thao tác sử dụng cơ bản.</p></li>
+</ol>
+<p class="install-process-note">Quy trình có thể thay đổi theo dòng xe, model camera và cấu hình nguồn. Kỹ thuật viên sẽ kiểm tra thực tế trước khi thi công.</p>
+</div>
+</section><section class="section" id="guide">
 <div class="wrap">
 <div class="section-head guide-head">
 <div>
