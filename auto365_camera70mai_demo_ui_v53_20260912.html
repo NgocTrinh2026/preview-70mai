@@ -6281,6 +6281,101 @@
       .hero-carousel-slide, .hero-carousel-content { height: 100%; min-height: 0; }
     }
 
+    .handover-check-section {
+      padding: 52px 0 56px;
+    }
+
+    .handover-check-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .handover-check-card {
+      min-width: 0;
+      padding: 22px 20px;
+      border: 1px solid #e5e7eb;
+      border-radius: var(--radius-card);
+      background: #fff;
+    }
+
+    .handover-check-number {
+      display: block;
+      margin-bottom: 18px;
+      color: var(--red);
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .handover-check-card h3 {
+      margin: 0 0 12px;
+      font-size: 16px;
+      line-height: 1.3;
+    }
+
+    .handover-check-card p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .handover-check-links {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .handover-check-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      min-height: 52px;
+      padding: 0 18px;
+      border: 1px solid #e5e7eb;
+      border-radius: var(--radius-card);
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+      transition: border-color var(--motion-ui) var(--ease-ui), color var(--motion-ui) var(--ease-ui), background-color var(--motion-ui) var(--ease-ui);
+    }
+
+    .handover-check-link::after {
+      content: "→";
+      color: var(--red);
+      font-size: 18px;
+    }
+
+    .handover-check-link:hover,
+    .handover-check-link:focus-visible {
+      border-color: var(--red);
+      color: var(--red);
+    }
+
+    .handover-video {
+      margin-top: 24px;
+    }
+
+    .handover-video .video-card {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 980px) {
+      .handover-check-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .handover-check-links { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .handover-check-section { padding: 38px 0 42px; }
+      .handover-check-grid { grid-template-columns: 1fr; gap: 12px; }
+      .handover-check-card { padding: 18px 16px; }
+    }
+
     .install-process-section {
       padding: 52px 0 56px;
     }
@@ -7324,6 +7419,31 @@
 <li class="install-process-step"><span class="install-process-number">06</span><h3>Bàn giao và hướng dẫn sử dụng</h3><p>Kiểm tra ghi và phát lại video, ngày giờ, bộ nhớ và Parking Mode nếu có; sau đó hướng dẫn khách các thao tác sử dụng cơ bản.</p></li>
 </ol>
 <p class="install-process-note">Quy trình có thể thay đổi theo dòng xe, model camera và cấu hình nguồn. Kỹ thuật viên sẽ kiểm tra thực tế trước khi thi công.</p>
+</div>
+</section>
+<section aria-labelledby="handover-check-title" class="handover-check-section" id="truoc-khi-nhan-xe">
+<div class="wrap">
+<div class="section-head">
+<div>
+<div class="eyebrow">TRƯỚC KHI NHẬN XE</div>
+<h2 id="handover-check-title">Trước khi nhận xe, bạn nên kiểm tra gì?</h2>
+<p>Dành vài phút xem lại hình ảnh, thử một đoạn video và kiểm tra thông tin bảo hành trước khi rời cửa hàng.</p>
+</div>
+</div>
+<div class="handover-check-grid">
+<article class="handover-check-card"><span class="handover-check-number">01</span><h3>Xem thử camera trước và sau</h3><p>Mở thử video vừa ghi từ camera trước và camera sau nếu có. Kiểm tra ngày giờ, góc quay và xem có vật gì che hình ảnh không.</p></article>
+<article class="handover-check-card"><span class="handover-check-number">02</span><h3>Tải thử video về điện thoại</h3><p>Nhờ kỹ thuật viên hướng dẫn kết nối điện thoại, tìm và lưu video. Nếu mua camera có 4G, bạn nên thử luôn tính năng xem xe từ xa.</p></article>
+<article class="handover-check-card"><span class="handover-check-number">03</span><h3>Thử chế độ khi tắt máy</h3><p>Nếu mua gói ghi hình khi đỗ, hỏi cách hoạt động, nguồn đi kèm và điều kiện ngắt bảo vệ ắc quy. Xác nhận cách bật, tắt chế độ khi cần.</p></article>
+<article class="handover-check-card"><span class="handover-check-number">04</span><h3>Lưu thông tin bảo hành</h3><p>Lưu báo giá, số máy, thông tin kích hoạt bảo hành và số liên hệ khi cần hỗ trợ. Kiểm tra điều kiện bảo hành theo đúng bộ camera đã chọn.</p></article>
+</div>
+<nav aria-label="Liên kết sau khi lắp" class="handover-check-links">
+<a class="handover-check-link" href="https://70maivietnam.store/chinh-sach-bao-hanh-doi-tra/" target="_blank" rel="noopener noreferrer">Điều kiện bảo hành 70mai</a>
+<a class="handover-check-link" href="#quy-trinh-lap-camera-70mai">Xem lại quy trình lắp đặt</a>
+<a class="handover-check-link" href="#lap-dat-theo-khu-vuc">Liên hệ điểm lắp Auto365</a>
+</nav>
+<div class="handover-video">
+<article class="video-card video-featured"><button aria-label="Mở video hướng dẫn kiểm tra camera sau khi lắp" class="video-open video-tile" data-js-only="" data-video="6Sj6MIwwAbg" type="button"><img alt="Video hướng dẫn kiểm tra camera sau khi lắp" decoding="async" fetchpriority="low" height="540" loading="lazy" src="https://i.ytimg.com/vi/6Sj6MIwwAbg/hqdefault.jpg" width="960"/><span aria-hidden="true" class="video-play">▶</span></button><div class="video-meta"><h3 class="video-title">Hướng dẫn kiểm tra camera sau khi lắp</h3><a class="video-direct-link" href="https://www.youtube.com/watch?v=6Sj6MIwwAbg&amp;t=5s" target="_blank" rel="noopener noreferrer">Xem video trên YouTube →</a></div></article>
+</div>
 </div>
 </section><section class="section" id="guide">
 <div class="wrap">
