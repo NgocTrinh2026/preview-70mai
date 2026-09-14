@@ -3998,7 +3998,7 @@
 
     @media(min-width:981px) {
       .case-study-track {
-        grid-template-rows: repeat(2, 306px);
+        grid-template-rows: repeat(2, max-content);
       }
 
 
@@ -4033,6 +4033,7 @@
 
     .case-study-media {
       width: 100%;
+      flex: 0 0 auto;
       aspect-ratio: 16/9;
       overflow: hidden;
       background: #fff;
