@@ -4040,9 +4040,10 @@
     }
 
     .case-study-media img {
+      display: block;
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
       object-position: center;
       transition: transform var(--motion-ui) var(--ease-ui);
       -webkit-user-drag: none;
@@ -5414,6 +5415,7 @@
     }
 
     .guide-media img {
+      display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -6294,7 +6296,8 @@
       position: relative;
       min-width: 0;
       padding: 18px 14px 16px;
-      border: 1px solid #e5e7eb;
+      border: 1px solid var(--red);
+      border-radius: var(--radius-card);
       background: #fff;
       transition: transform var(--motion-ui) var(--ease-ui), border-color var(--motion-ui) var(--ease-ui), box-shadow var(--motion-ui) var(--ease-ui);
     }
