@@ -235,21 +235,6 @@
       gap: 16px;
     }
 
-    .video-card {
-      position: relative;
-      overflow: hidden;
-      background: #111;
-      border-radius: var(--radius-card);
-    }
-
-    .video-open {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-
     .video-tile {
       width: 100%;
       padding: 0;
@@ -1402,7 +1387,20 @@
       }
     }
 
-    
+    @media (prefers-reduced-motion:reduce) {
+      .location-network-v2 *,
+      .location-network-v2 *::before,
+      .location-network-v2 *::after {
+        transition: none !important;
+      }
+
+      .location-v2-cta:hover,
+      .location-v2-region-tab:hover,
+      .location-v2-hq-card:hover,
+      .location-v2-branch-card:hover {
+        transform: none !important;
+      }
+    }
 
     .video-layout {
       align-items: start;
@@ -1584,7 +1582,7 @@
       border: 1px solid rgba(255, 255, 255, .16);
       background: linear-gradient(135deg, #25292f 0%, #1d2025 100%);
       box-shadow: 0 8px 22px rgba(0, 0, 0, .16);
-      transition: transform var(--motion-ui) var(--ease-ui), box-shadow var(--motion-ui) var(--ease-ui), border-color var(--motion-ui) var(--ease-ui);
+      transition: var(--motion-ui) var(--ease-ui);
     }
 
     .advice-action:first-child {
@@ -1635,7 +1633,7 @@
     .advice-action i {
       color: #fff;
       font-size: 20px;
-      transition: transform var(--motion-ui) var(--ease-ui), opacity var(--motion-ui) var(--ease-ui), background-color var(--motion-ui) var(--ease-ui), border-color var(--motion-ui) var(--ease-ui), box-shadow var(--motion-ui) var(--ease-ui), color var(--motion-ui) var(--ease-ui);
+      transition: var(--motion-ui) var(--ease-ui);
     }
 
     .advice-action:hover i {
@@ -1652,7 +1650,13 @@
       }
     }
 
-    
+    @media (prefers-reduced-motion:reduce) {
+
+      .advice-action:hover,
+      .advice-action:hover i {
+        transform: none !important;
+      }
+    }
 
     .hero h1 {
       font-size: clamp(40px, 4.35vw, 58px) !important;
@@ -1942,12 +1946,12 @@
       position: relative;
       overflow: hidden;
       cursor: pointer;
-      transition: transform var(--motion-ui) var(--ease-ui), opacity var(--motion-ui) var(--ease-ui), background-color var(--motion-ui) var(--ease-ui), border-color var(--motion-ui) var(--ease-ui), box-shadow var(--motion-ui) var(--ease-ui), color var(--motion-ui) var(--ease-ui);
+      transition: var(--motion-ui) var(--ease-ui);
       border-radius: var(--radius-card);
     }
 
     .video-tile img {
-      transition: transform var(--motion-ui) var(--ease-ui), opacity var(--motion-ui) var(--ease-ui), background-color var(--motion-ui) var(--ease-ui), border-color var(--motion-ui) var(--ease-ui), box-shadow var(--motion-ui) var(--ease-ui), color var(--motion-ui) var(--ease-ui);
+      transition: var(--motion-ui) var(--ease-ui);
     }
 
     .video-tile::before {
@@ -1958,7 +1962,7 @@
       background: linear-gradient(180deg, transparent 42%, rgba(0, 0, 0, .72) 100%) !important;
       opacity: .82 !important;
       pointer-events: none !important;
-      transition: transform var(--motion-ui) var(--ease-ui), opacity var(--motion-ui) var(--ease-ui), background-color var(--motion-ui) var(--ease-ui), border-color var(--motion-ui) var(--ease-ui), box-shadow var(--motion-ui) var(--ease-ui), color var(--motion-ui) var(--ease-ui);
+      transition: var(--motion-ui) var(--ease-ui);
     }
 
     .video-tile:hover {
@@ -1967,7 +1971,7 @@
     }
 
     .video-tile:hover img {
-      transform: scale(1.02) !important;
+      transform: scale(1.035) !important;
     }
 
     .video-tile:hover::before {
@@ -1976,33 +1980,7 @@
 
     .video-play {
       z-index: 3;
-      transition: transform var(--motion-ui) var(--ease-ui), opacity var(--motion-ui) var(--ease-ui), background-color var(--motion-ui) var(--ease-ui), border-color var(--motion-ui) var(--ease-ui), box-shadow var(--motion-ui) var(--ease-ui), color var(--motion-ui) var(--ease-ui);
-    }
-
-    .video-meta {
-      position: absolute;
-      right: 16px;
-      bottom: 14px;
-      left: 16px;
-      z-index: 3;
-      padding-top: 12px;
-      color: #fff;
-    }
-
-    .video-title {
-      margin: 0 0 7px;
-      font-size: 15px;
-      line-height: 1.4;
-      font-weight: 700;
-      color: #fff;
-    }
-
-    .video-direct-link {
-      display: inline-flex;
-      align-items: center;
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--red);
+      transition: var(--motion-ui) var(--ease-ui);
     }
 
     .video-tile:hover .video-play {
@@ -2056,7 +2034,14 @@
       }
     }
 
-    
+    @media (prefers-reduced-motion:reduce) {
+
+      .video-tile,
+      .video-tile img,
+      .video-play {
+        transition: 0.2s ease-in-out !important;
+      }
+    }
 
     .install-cost-list {
       background: #fff;
@@ -2069,7 +2054,7 @@
     .install-cost-item {
       position: relative;
       border-bottom: 1px solid #e1e4e6;
-      transition: transform var(--motion-ui) var(--ease-ui), opacity var(--motion-ui) var(--ease-ui), background-color var(--motion-ui) var(--ease-ui), border-color var(--motion-ui) var(--ease-ui), box-shadow var(--motion-ui) var(--ease-ui), color var(--motion-ui) var(--ease-ui);
+      transition: var(--motion-ui) var(--ease-ui);
     }
 
     .install-cost-item:last-child {
@@ -2466,7 +2451,7 @@
       background: transparent;
       border-color: #fff;
       color: #fff;
-      transition: transform var(--motion-ui) var(--ease-ui), opacity var(--motion-ui) var(--ease-ui), background-color var(--motion-ui) var(--ease-ui), border-color var(--motion-ui) var(--ease-ui), box-shadow var(--motion-ui) var(--ease-ui), color var(--motion-ui) var(--ease-ui);
+      transition: var(--motion-ui) var(--ease-ui);
     }
 
     .final .hero-actions .btn:not(.btn-red):hover {
@@ -2600,7 +2585,15 @@
       }
     }
 
-    
+    @media(prefers-reduced-motion:reduce) {
+      .vehicle-advice-link {
+        transition: none
+      }
+
+      .vehicle-advice-link:hover {
+        transform: none
+      }
+    }
 
     .hero {
       min-height: 0;
@@ -2648,6 +2641,7 @@
     @media (max-width:760px) {
       .hero {
         min-height: 0;
+        background-position: 60% center;
       }
 
       .hero h1 {
@@ -2757,7 +2751,7 @@
       }
 
       75% {
-        transform: scale(1.02);
+        transform: scale(1.035);
       }
 
       100% {
@@ -2793,7 +2787,7 @@
     }
 
     .compare-card-btn {
-      transition: transform var(--motion-ui) var(--ease-ui), opacity var(--motion-ui) var(--ease-ui), background-color var(--motion-ui) var(--ease-ui), border-color var(--motion-ui) var(--ease-ui), box-shadow var(--motion-ui) var(--ease-ui), color var(--motion-ui) var(--ease-ui);
+      transition: var(--motion-ui) var(--ease-ui);
     }
 
     .compare-card-btn:active {
@@ -2820,6 +2814,7 @@
       visibility: hidden;
       pointer-events: none;
       transition: opacity var(--motion-slow) var(--ease-ui);
+      background-position: center;
       z-index: 1;
     }
 
@@ -2957,7 +2952,7 @@
       font-size: 30px;
       line-height: 1;
       cursor: pointer;
-      transition: transform var(--motion-ui) var(--ease-ui), opacity var(--motion-ui) var(--ease-ui), background-color var(--motion-ui) var(--ease-ui), border-color var(--motion-ui) var(--ease-ui), box-shadow var(--motion-ui) var(--ease-ui), color var(--motion-ui) var(--ease-ui);
+      transition: var(--motion-ui) var(--ease-ui);
     }
 
     .hero-carousel-arrow:hover {
@@ -2995,12 +2990,16 @@
       border: 0;
       background: rgba(255, 255, 255, .45);
       cursor: pointer;
-      transition: transform var(--motion-ui) var(--ease-ui), opacity var(--motion-ui) var(--ease-ui), background-color var(--motion-ui) var(--ease-ui), border-color var(--motion-ui) var(--ease-ui), box-shadow var(--motion-ui) var(--ease-ui), color var(--motion-ui) var(--ease-ui);
+      transition: var(--motion-ui) var(--ease-ui);
     }
 
     .hero-carousel-dots button.is-active {
       width: 26px;
       background: var(--red);
+    }
+
+    .hero-slide-product {
+      background-position: center center;
     }
 
     .hero-slide-product .product-copy {
@@ -3010,6 +3009,10 @@
     @media (max-width:1024px) {
       .hero-carousel-arrow {
         display: none;
+      }
+
+      .hero-carousel-slide {
+        background-position: 60% center;
       }
 
       .hero-carousel-copy {
@@ -3024,12 +3027,26 @@
         min-height: 0;
       }
 
+      .hero-carousel-slide {
+        background-position: center center;
+      }
+
       .hero-carousel-copy .hero-actions {
         flex-wrap: wrap;
       }
     }
 
-    
+    @media (prefers-reduced-motion:reduce) {
+      html {
+        scroll-behavior: auto
+      }
+
+      .hero-carousel-slide,
+      .hero-carousel-dots button,
+      .compare-card-btn {
+        transition: none
+      }
+    }
 
     @media (max-width:760px) {
       .hero.hero-carousel {
@@ -3041,6 +3058,22 @@
         min-height: 0;
       }
 
+      .hero-carousel-slide {
+        min-height: 0;
+        background-repeat: no-repeat;
+      }
+
+      .hero-carousel-slide[data-hero-slide="1"] {
+        background-position: 64% center;
+      }
+
+      .hero-carousel-slide[data-hero-slide="2"] {
+        background-position: 66% center;
+      }
+
+      .hero-carousel-slide[data-hero-slide="3"] {
+        background-position: 63% center;
+      }
 
       .hero-carousel-breadcrumb {
         top: 14px;
@@ -3252,7 +3285,11 @@
       }
     }
 
-    
+    @media (prefers-reduced-motion:reduce) {
+      .hero-slide-overview .hero-carousel-copy {
+        transition: none !important;
+      }
+    }
 
     .video-play {
       border-radius: 50%;
@@ -3385,7 +3422,7 @@
       white-space: normal
     }
 
-    :where(a, button, input, select, textarea, [tabindex]):focus-visible {
+    :where(a, button, input, select, textarea):focus-visible {
       outline: 3px solid var(--red);
       outline-offset: 3px
     }
@@ -3790,7 +3827,15 @@
       }
     }
 
-    
+    @media (prefers-reduced-motion:reduce) {
+      .advisor-choice {
+        transition: none
+      }
+
+      .advisor-choice:hover {
+        transform: none
+      }
+    }
 
     .case-studies-section {
       padding: 44px 0 32px;
@@ -3911,21 +3956,25 @@
     }
 
     .case-study-media {
-      width: 100%;
       aspect-ratio: 16/9;
       overflow: hidden;
-      background: #fff
+      background: #f2f3f3
     }
 
     .case-study-media img {
-      display: block;
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
       object-position: center;
       transition: transform var(--motion-ui) var(--ease-ui);
       -webkit-user-drag: none;
       user-select: none
+    }
+
+    /* v9: every installation case uses the same visual frame height. */
+    .case-study-media {
+      height: 180px;
+      aspect-ratio: auto
     }
 
     .advisor-step legend {
@@ -3936,6 +3985,13 @@
     .advisor-step legend b {
       color: #fff;
       font-size: 11px
+    }
+
+    @media (max-width: 760px) {
+      .case-study-media {
+        height: auto;
+        aspect-ratio: 16/9
+      }
     }
 
     .case-study-body {
@@ -4107,7 +4163,24 @@
       }
     }
 
-    
+    @media(prefers-reduced-motion:reduce) {
+      .case-study-viewport {
+        scroll-behavior: auto
+      }
+
+      .case-study-card,
+      .case-study-media img,
+      .case-study-cta,
+      .case-brand-filter {
+        transition: none !important
+      }
+
+      .case-study-card:hover,
+      .case-study-card:hover .case-study-media img,
+      .case-study-card:hover .case-study-cta {
+        transform: none !important
+      }
+    }
 
     #products {
       padding-top: 22px;
@@ -4208,61 +4281,190 @@
       background: #1b2025;
       color: #fff;
       border-color: #1b2025;
-    }    .product-card .compare-card-btn,
-    .product-card .product-actions > a.btn-red,
-    .product-card .config-card-btn {
-      transition: transform var(--motion-ui) var(--ease-ui), background-color var(--motion-ui) var(--ease-ui), border-color var(--motion-ui) var(--ease-ui), color var(--motion-ui) var(--ease-ui);
     }
 
-    .product-card .compare-card-btn {
+    .product-actions .compare-card-btn {
       background: #fff;
       border: 1px solid #d9dcde;
       color: #171b20;
     }
 
-    .product-card .compare-card-btn:hover {
-      background: #f7f8f8;
-      border-color: #bfc5c9;
-      color: #11161c;
-    }
-
-    .product-card .compare-card-btn[aria-pressed="true"] {
-      background: var(--red);
+    .product-actions .compare-card-btn:hover {
+      background: #fff7f7;
       border-color: var(--red);
-      color: #fff;
+      color: var(--red);
     }
 
-    .product-card .product-actions > a.btn-red {
+    .product-actions .compare-card-btn[aria-pressed="true"] {
+      background: #fff0f1;
+      border-color: var(--red);
+      color: var(--red);
+    }
+
+    .product-actions>a.btn-red {
       background: #fff;
       border: 1px solid var(--red);
       color: var(--red);
     }
 
-    .product-card .product-actions > a.btn-red:hover,
-    .product-card .product-actions > a.btn-red:focus-visible {
-      background: var(--red);
+    .product-actions>a.btn-red:hover {
+      background: #fff5f5;
       border-color: var(--red);
-      color: #fff;
+      color: var(--red);
     }
 
-    .product-card .config-card-btn {
+    .case-brand-filter {
+      border: 1px solid #d9dcde;
+      border-radius: var(--radius-control);
+    }
+
+    .filter-toggle-icon {
+      font-size: 16px;
+      line-height: 1
+    }
+
+    .filter-toggle-count {
+      min-width: 20px;
+      height: 20px;
+      padding: 0 6px;
+      border-radius: 999px;
       background: #11161c;
-      border: 1px solid #11161c;
       color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9px
     }
 
-    .product-card .config-card-btn:hover {
-      background: #252b31;
-      border-color: #252b31;
-      color: #fff;
-      transform: translateY(-1px);
+    .filter-toggle[aria-expanded="true"] .filter-toggle-count {
+      background: #fff;
+      color: var(--red)
+    }
+
+    .sort-select {
+      min-width: 148px;
+      padding: 0 34px 0 11px
+    }
+
+    .product-count {
+      margin: 0 0 14px;
+      color: #747b81;
+      font-size: 12px
+    }
+
+    .advanced-filter-panel {
+      margin: 0 0 22px;
+      padding: 22px;
+      border: 1px solid #dedfe0;
+      background: #fff;
+      border-radius: var(--radius-card);
+      box-shadow: 0 14px 34px rgba(16, 19, 25, .08)
+    }
+
+    .advanced-filter-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 18px
+    }
+
+    .advanced-filter-head small {
+      color: var(--red);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 1.1px
+    }
+
+    .advanced-filter-head h3 {
+      margin: 5px 0 0;
+      font-size: 25px;
+      line-height: 1.16;
+      letter-spacing: -.5px
+    }
+
+    .filter-clear {
+      min-height: 40px;
+      padding: 0 8px;
+      border: 0;
+      background: transparent;
+      color: var(--red);
+      font-size: 12px;
+      font-weight: 900;
+      cursor: pointer
+    }
+
+    .advanced-filter-groups {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px
+    }
+
+    .filter-group {
+      min-width: 0;
+      margin: 0;
+      padding: 0;
+      border: 0
+    }
+
+    .filter-group legend {
+      margin-bottom: 9px;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .55px;
+      text-transform: uppercase
+    }
+
+    .filter-group label {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      min-height: 38px;
+      color: #596168;
+      font-size: 13px;
+      line-height: 1.4;
+      cursor: pointer
+    }
+
+    .filter-group input {
+      width: 17px;
+      height: 17px;
+      flex: 0 0 17px;
+      accent-color: var(--red)
+    }
+
+    .filter-group label.is-unavailable {
+      opacity: .42;
+      cursor: not-allowed
+    }
+
+    .filter-group label.is-unavailable input {
+      cursor: not-allowed
+    }
+
+    .advanced-filter-actions {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 17px
+    }
+
+    .advanced-filter-actions .btn {
+      min-width: 190px
+    }
+
+    #filter-apply {
+      display: none
+    }
+
+    .advanced-filter-actions::after {
+      display: none
     }
 
     .products {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 14px;
-      align-items: stretch;
+      align-items: stretch
     }
 
     .product-card {
@@ -4274,6 +4476,22 @@
       border: 1px solid #e0e2e3;
       background: #fff;
       border-radius: var(--radius-card);
+      transition: transform var(--motion-ui) var(--ease-ui), border-color var(--motion-ui) var(--ease-ui), box-shadow var(--motion-ui) var(--ease-ui)
+    }
+
+    .product-card:hover {
+      transform: translateY(-2px);
+      border-color: #d1d5d8;
+      box-shadow: 0 12px 28px rgba(16, 19, 25, .08)
+    }
+
+    .product-card[hidden] {
+      display: none !important
+    }
+
+    .product-card.compare-selected {
+      border-color: #efb9bd;
+      box-shadow: 0 10px 26px rgba(201, 21, 30, .08)
     }
 
     .product-media {
@@ -4282,7 +4500,7 @@
       height: 200px;
       min-height: 200px;
       overflow: hidden;
-      background: #fff;
+      background: #fff
     }
 
     .product-media-link {
@@ -4290,7 +4508,7 @@
       width: 100%;
       height: 100%;
       align-items: center;
-      justify-content: center;
+      justify-content: center
     }
 
     .product-media img {
@@ -4300,7 +4518,310 @@
       padding: 8px;
       object-fit: contain;
       object-position: center;
+      background: #fff
+    }
+
+    .product-status-badges {
+      position: absolute;
+      z-index: 2;
+      left: 10px;
+      top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      max-width: calc(100% - 20px);
+      pointer-events: none
+    }
+
+    .product-status-badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 5px 8px;
+      border: 1px solid transparent;
+      border-radius: var(--radius-control);
+      font-size: 12px;
+      font-weight: 900;
+      line-height: 1;
+      white-space: nowrap
+    }
+
+    .product-status-badge.is-bestseller {
+      background: var(--red);
+      border-color: var(--red);
+      color: #fff
+    }
+
+    /* v11: neutral bestseller tag, without the red fill. */
+    .product-status-badge.is-bestseller {
       background: #fff;
+      border-color: #11161c;
+      color: #11161c
+    }
+
+    /* v12: product link button is neutral, then inverts on hover. */
+    .product-actions > a.btn-red {
+      background: #fff !important;
+      border-color: #11161c !important;
+      color: #11161c !important
+    }
+
+    .product-actions > a.btn-red:hover,
+    .product-actions > a.btn-red:focus-visible {
+      background: #11161c !important;
+      border-color: #11161c !important;
+      color: #fff !important
+    }
+
+    /* v11: remove the red top accent from the three-question advisor box. */
+    .advisor-tool {
+      border-top: 1px solid #e2e5e8
+    }
+
+    .product-status-badge.is-new {
+      background: #fff;
+      border-color: var(--red);
+      color: var(--red)
+    }
+
+    .product-status-badge.is-discontinued {
+      background: #eceeef;
+      border-color: #d7dade;
+      color: #656c72
+    }
+
+    .product-body {
+      display: grid;
+      grid-template-rows: auto auto 1fr auto;
+      min-height: 220px;
+      padding: 14px 14px 12px
+    }
+
+    .product-body h3 {
+      display: -webkit-box;
+      min-height: 46px;
+      margin: 0 0 7px;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      font-size: 18px;
+      line-height: 1.27;
+      letter-spacing: -.2px
+    }
+
+    .product-title-link {
+      color: #101319;
+      text-decoration: none
+    }
+
+    .product-title-link:hover {
+      color: var(--red)
+    }
+
+    .product-chips {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      gap: 4px;
+      min-height: 30px;
+      max-height: 58px;
+      margin: 0;
+      overflow: hidden
+    }
+
+    .product-chips span {
+      min-height: 25px;
+      padding: 5px 7px;
+      background: #f1f2f2;
+      color: #50585e;
+      border-radius: 3px;
+      font-size: 12px;
+      font-weight: 750;
+      line-height: 1.3;
+      white-space: nowrap
+    }
+
+    .product-chips span:nth-child(n
+
+      /**/
+      +5) {
+      display: none
+    }
+
+    .product-best {
+      display: none
+    }
+
+    .product-bottom {
+      align-self: end;
+      width: 100%;
+      padding-top: 10px;
+      border-top: 1px solid #eceeef
+    }
+
+    .product-bottom>strong {
+      display: flex;
+      align-items: center;
+      min-height: 34px;
+      margin: 0 0 10px;
+      color: var(--red);
+      font-size: 21px;
+      line-height: 1.12
+    }
+
+    .product-actions {
+      display: grid;
+      grid-template-columns: .82fr 1.18fr;
+      gap: 8px
+    }
+
+    .product-actions .btn {
+      width: 100%;
+      min-width: 0;
+      min-height: 42px;
+      padding: 0 8px;
+      font-size: 11.5px
+    }
+
+    .product-actions .compare-card-btn {
+      background: #fff;
+      border: 1px solid #d9dcde;
+      color: #171b20;
+      transition: border-color var(--motion-ui) var(--ease-ui), background-color var(--motion-ui) var(--ease-ui), color var(--motion-ui) var(--ease-ui)
+    }
+
+    .product-actions .compare-card-btn:hover {
+      border-color: var(--red);
+      color: var(--red);
+      background: #fff7f7
+    }
+
+    .product-actions .compare-card-btn[aria-pressed="true"] {
+      border-color: var(--red);
+      background: #fff0f1;
+      color: var(--red);
+      box-shadow: inset 0 0 0 1px rgba(201, 21, 30, .06)
+    }
+
+    .product-actions .compare-card-btn,
+    .product-actions>a.btn-red {
+      background: #f3f4f4;
+      border: 1px solid var(--red);
+      color: var(--red);
+    }
+
+    .product-actions .compare-card-btn:hover,
+    .product-actions>a.btn-red:hover,
+    .product-actions .compare-card-btn[aria-pressed="true"] {
+      background: #eceeef;
+      border-color: var(--red);
+      color: var(--red);
+    }
+
+    .location-v2-branch-card .install-point-select {
+      background: #11161c !important;
+      border-color: #11161c !important;
+      color: #fff !important;
+    }
+
+    .product-actions>a.btn-red {
+      background: #fff;
+      border: 1px solid var(--red);
+      color: var(--red)
+    }
+
+    .product-actions>a.btn-red:hover {
+      background: #fff5f5
+    }
+
+    /* v13: final neutral treatment for the product-detail link. */
+    .product-actions > a.btn-red,
+    .product-actions > a.btn-red:hover,
+    .product-actions > a.btn-red:focus-visible {
+      background: #fff !important;
+      border: 1px solid #11161c !important;
+      color: #11161c !important
+    }
+
+    /* v14: match the decision table's "Xem lựa chọn" button. */
+    .product-actions > a.btn-red {
+      background: #fff !important;
+      border-color: var(--red) !important;
+      color: var(--red) !important
+    }
+
+    .product-actions > a.btn-red:hover,
+    .product-actions > a.btn-red:focus-visible {
+      background: var(--red) !important;
+      border-color: var(--red) !important;
+      color: #fff !important
+    }
+
+    /* v15: requested black-and-white product link interaction. */
+    .product-actions > a.btn-red {
+      background: #fff !important;
+      border-color: #11161c !important;
+      color: #11161c !important
+    }
+
+    .product-actions > a.btn-red:hover,
+    .product-actions > a.btn-red:focus-visible {
+      background: #11161c !important;
+      border-color: #11161c !important;
+      color: #fff !important
+    }
+
+    .section-head .eyebrow,
+    .advisor-tool .eyebrow,
+    .vehicle-advice-copy .eyebrow,
+    .case-studies-head .eyebrow,
+    .location-v2-head .eyebrow,
+    .install-cost-copy .eyebrow,
+    .guide-head .eyebrow,
+    .faq-clean-intro .eyebrow,
+    .trust-head .eyebrow,
+    .final-in .eyebrow,
+    .hybrid-config-head .eyebrow {
+      color: #747b81
+    }
+
+    .product-actions .config-card-btn {
+      grid-column: 1/-1;
+      min-height: 44px;
+      background: #11161c;
+      border: 1px solid #11161c;
+      color: #fff
+    }
+
+    .product-actions .config-card-btn:hover {
+      background: #262c32;
+      border-color: #262c32
+    }
+
+    /* v8: restore the approved legacy product action treatment. */
+    .product-actions .compare-card-btn {
+      background: #fff !important;
+      border: 1px solid #d9dcde !important;
+      color: #171b20 !important;
+      font-size: 12px
+    }
+
+    .product-actions .compare-card-btn[aria-pressed="true"] {
+      background: #f3f4f4 !important;
+      border-color: var(--red) !important;
+      color: var(--red) !important
+    }
+
+    .product-actions > a.btn-red {
+      background: #fff !important;
+      border: 1px solid var(--red) !important;
+      color: var(--red) !important;
+      font-size: 12px
+    }
+
+    .product-actions .config-card-btn {
+      font-size: 12px
     }
 
     .load-more {
@@ -4470,7 +4991,18 @@
       }
     }
 
-    
+    @media (prefers-reduced-motion:reduce) {
+
+      .product-card,
+      .catalog-tab,
+      .compare-card-btn {
+        transition: none !important
+      }
+
+      .product-card:hover {
+        transform: none
+      }
+    }
 
     .hybrid-decision {
       background: #fff;
@@ -4786,7 +5318,13 @@
       }
     }
 
-    
+    @media(prefers-reduced-motion:reduce) {
+
+      .hybrid-decision-table tbody tr,
+      .decision-config-btn {
+        transition: none
+      }
+    }
 
     #guide {
       padding: 44px 0 46px
@@ -4972,7 +5510,13 @@
       }
     }
 
-    
+    @media(prefers-reduced-motion:reduce) {
+
+      .guide-card,
+      .guide-media img {
+        transition: none !important
+      }
+    }
 
     /* FAQ + trust blocks — canonical V10 component styles. */
     .faq-clean {
@@ -5352,7 +5896,18 @@
       }
     }
 
-    
+    @media(prefers-reduced-motion:reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms;
+        transition-duration: .01ms;
+      }
+    }
 
     html:not(.js-ready) [data-js-only],
     html:not(.js-ready) .advisor-step-grid,
@@ -5534,7 +6089,7 @@
       .guide-card:hover .guide-media img,
       .case-study-card:hover .case-study-media img,
       .video-tile:hover img {
-        transform: scale(1.02);
+        transform: scale(1.035);
       }
     }
 
@@ -5546,8 +6101,28 @@
       transition: opacity var(--motion-ui) var(--ease-ui), visibility var(--motion-ui) var(--ease-ui);
     }
 
-    
-.product-card .product-actions > a.btn-red {
+    @media (prefers-reduced-motion:reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        transition-delay: 0ms !important;
+      }
+
+      .product-card:hover,
+      .case-study-card:hover,
+      .guide-card:hover,
+      .guide-card:hover .guide-media img,
+      .case-study-card:hover .case-study-media img,
+      .video-tile:hover img {
+        transform: none !important;
+      }
+    }
+    /* v16: final cascade override for product-card "Xem sản phẩm" links. */
+    .product-card .product-actions > a.btn-red {
       background: #fff !important;
       border: 1px solid #11161c !important;
       color: #11161c !important
@@ -5559,7 +6134,8 @@
       border: 1px solid #11161c !important;
       color: #fff !important
     }
-#guide {
+    /* v17: reduce the visual gap between the final content sections. */
+    #guide {
       padding-top: 40px !important;
       padding-bottom: 44px !important
     }
@@ -5573,7 +6149,9 @@
       padding-top: 34px !important;
       padding-bottom: 34px !important
     }
-.product-actions .compare-card-btn[aria-pressed="true"] {
+
+    /* v18: selected comparison state and recommendation actions. */
+    .product-actions .compare-card-btn[aria-pressed="true"] {
       background: var(--red) !important;
       border-color: var(--red) !important;
       color: #fff !important
@@ -5594,13 +6172,17 @@
       border-color: #fff !important;
       color: #11161c !important
     }
-.advisor-result .advisor-actions #rec-url:hover,
+
+    /* v19: no hover transition for the recommendation product link. */
+    .advisor-result .advisor-actions #rec-url:hover,
     .advisor-result .advisor-actions #rec-url:focus-visible {
       background: #fff !important;
       border-color: #fff !important;
       color: #11161c !important
     }
-.hero .hero-actions .btn-red,
+
+    /* v20: hero product CTA uses the primary red action style. */
+    .hero .hero-actions .btn-red,
     .hero-carousel .hero-actions .btn-red {
       background: var(--red) !important;
       border-color: var(--red) !important;
@@ -5615,7 +6197,8 @@
       border-color: #a91018 !important;
       color: #fff !important
     }
-:root {
+    /* v22: slightly brighter neutral surfaces. */
+    :root {
       --soft: #fafafa
     }
 
@@ -5627,7 +6210,8 @@
     .compare-table tbody th {
       background: #fafafa
     }
-#compare-bar #open-compare {
+    /* v23: primary action for the comparison bar. */
+    #compare-bar #open-compare {
       background: var(--red) !important;
       border-color: var(--red) !important;
       color: #fff !important
@@ -5639,7 +6223,19 @@
       border-color: #a91018 !important;
       color: #fff !important
     }
-
+      /* v39: lock the case-study media frame so every card has the same image height. */
+    @media (min-width: 761px) {
+      .case-study-media {
+        height: 180px !important;
+        min-height: 180px !important;
+        aspect-ratio: auto !important;
+      }
+      .case-study-media img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+      }
+    }    /* v40: show the full case thumbnail without cropping banner text. */
     .case-study-media {
       background: #fff !important;
       aspect-ratio: 16 / 9 !important;
@@ -5658,7 +6254,7 @@
         aspect-ratio: 16 / 9 !important;
       }
     }
-    /* Case layout */
+    /* Canonical case layout. */
     .case-brand-filters { display: flex; flex-wrap: nowrap; align-items: center; gap: 8px; width: 100%; overflow-x: auto; scrollbar-width: none; margin-top: 18px; margin-bottom: 20px; }
     .case-brand-filters::-webkit-scrollbar { display: none; }
     .case-brand-filters button { width: auto; flex: 0 0 auto; }
@@ -5670,7 +6266,26 @@
     @media (min-width: 761px) and (max-width: 980px) {
 .case-study-track.is-filtered { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: none; grid-auto-flow: row; grid-auto-columns: auto; gap: 14px 16px; width: 100%; }
     }
-    /* Hero media */
+
+
+    .hero-carousel-slide {
+      overflow: hidden;
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      background-image: none !important;
+      background-color: #080c11;
+    }
+
+    .hero-media { position: absolute; inset: 0; z-index: 0; overflow: hidden; background: #080c11; }
+
+    .hero-media img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+
+    .hero-carousel-content { position: relative; z-index: 2; }
+
+    @media (max-width: 760px) { .case-brand-filters { margin-top: 14px; margin-bottom: 16px; } }
+
+    /* Canonical Hero media and responsive aspect ratios. */
     .hero.hero-carousel, .hero-carousel-track {
       position: relative;
       width: 100%;
@@ -5686,10 +6301,10 @@
       width: 100%;
       height: 100%;
       overflow: hidden;
-      background-color: #080c11;
+      background: none !important;
     }
 
-    .hero-media { position: absolute; inset: 0; display: block; width: 100%; height: 100%; z-index: 0; overflow: hidden; }
+    .hero-media { position: absolute; inset: 0; display: block; width: 100%; height: 100%; z-index: 0; overflow: hidden; background: #080c11; }
 
     .hero-media img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
 
@@ -5700,17 +6315,6 @@
     @media (max-width: 760px) {
       .hero.hero-carousel, .hero-carousel-track { aspect-ratio: 1080 / 1620; min-height: 0; }
       .hero-carousel-slide, .hero-carousel-content { height: 100%; min-height: 0; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto !important; }
-      *, *::before, *::after {
-        animation-duration: .01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: .01ms !important;
-        transition-delay: 0ms !important;
-        scroll-behavior: auto !important;
-      }
     }
 </style>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
