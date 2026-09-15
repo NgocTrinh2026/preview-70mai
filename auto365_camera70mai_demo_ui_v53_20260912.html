@@ -8464,7 +8464,7 @@ $$('.video-open').forEach(b => {
               window.dataLayer.push({ event: '70mai_hero_slide_change', slide_index: index + 1 });
             }
           }
-          // Auto-advance every 5 seconds; manual controls remain available.
+          // Manual navigation via buttons, dots, swipe, and keyboard.
           prev?.addEventListener('click', () => show(index - 1, true));
           next?.addEventListener('click', () => show(index + 1, true));
           dots.forEach(dot => dot.addEventListener('click', () => show(Number(dot.dataset.heroDot), true)));
