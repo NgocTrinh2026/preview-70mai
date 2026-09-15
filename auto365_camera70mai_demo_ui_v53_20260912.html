@@ -6506,14 +6506,16 @@
     .auto365-proof-head { display: block; max-width: 760px; margin: 0 auto 24px; text-align: center; visibility: visible; }
     .auto365-proof-head h2 { display: block; margin: 0; color: var(--ink); font-size: clamp(30px, 3.2vw, 42px); line-height: 1.12; letter-spacing: -1px; visibility: visible; }
     .auto365-proof-points { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 0 0 24px; visibility: visible; }
-    .auto365-proof-point { min-width: 0; padding: 18px 16px; border: 1px solid #e5e7eb; border-radius: var(--radius-card); background: #fff; }
-    .auto365-proof-point strong { display: block; margin-bottom: 7px; color: var(--red); font-size: 18px; line-height: 1.2; }
+    .auto365-proof-point { display: flex; min-width: 0; min-height: 122px; flex-direction: column; padding: 18px 16px; border: 1px solid #e5e7eb; border-radius: var(--radius-card); background: #fff; }
+    .auto365-proof-point strong { display: block; min-height: 44px; margin-bottom: 7px; color: var(--red); font-size: 17px; line-height: 1.25; }
     .auto365-proof-point p { margin: 0; color: var(--text-muted); font-size: 13px; line-height: 1.5; }
     .auto365-proof-image { display: block; width: 100%; aspect-ratio: 16 / 7; overflow: hidden; border-radius: var(--radius-card); background: #f7f8f9; visibility: visible; }
     .auto365-proof-image img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
     @media (max-width: 767px) {
       .auto365-proof-section { padding: 40px 0 46px; }
       .auto365-proof-points { grid-template-columns: 1fr; gap: 12px; }
+      .auto365-proof-point { min-height: 0; }
+      .auto365-proof-point strong { min-height: 0; }
       .auto365-proof-image { aspect-ratio: 4 / 3; }
     }</style>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -7443,8 +7445,8 @@
 <div class="auto365-proof-head"><div class="eyebrow">ĐỒNG HÀNH CÙNG AUTO365</div><h2 id="auto365-proof-title">Vì sao nên lắp camera 70mai tại Auto365?</h2></div>
 <div class="auto365-proof-points">
 <article class="auto365-proof-point"><strong>91 điểm lắp trên toàn quốc</strong><p>Dễ tìm điểm lắp phù hợp tại 33 tỉnh/thành.</p></article>
-<article class="auto365-proof-point"><strong>Đội ngũ nhân viên chuyên nghiệp, tay nghề cao</strong><p>Kỹ thuật viên kiểm tra, thi công và hướng dẫn sử dụng camera theo cấu hình đã chọn.</p></article>
-<article class="auto365-proof-point"><strong>Quy trình rõ ràng, hỗ trợ sau lắp</strong><p>Kiểm tra hình ảnh, ứng dụng, bộ nhớ và hướng dẫn sử dụng trước khi bàn giao.</p></article>
+<article class="auto365-proof-point"><strong>Đội ngũ nhân viên tay nghề cao</strong><p>Kỹ thuật viên kiểm tra, thi công và hướng dẫn sử dụng camera theo cấu hình đã chọn.</p></article>
+<article class="auto365-proof-point"><strong>Quy trình lắp đặt rõ ràng</strong><p>Kiểm tra hình ảnh, ứng dụng, bộ nhớ và hướng dẫn sử dụng trước khi bàn giao.</p></article>
 </div>
 <figure class="auto365-proof-image"><img alt="Đội ngũ Auto365 tại sự kiện 70mai Việt Nam" decoding="async" height="875" loading="lazy" src="https://auto365.vn/uploads/images/tin%20t%E1%BB%A9c/T11/02/tri-an-he-thong-auto365.png.webp" width="2000"/></figure>
 </div>
