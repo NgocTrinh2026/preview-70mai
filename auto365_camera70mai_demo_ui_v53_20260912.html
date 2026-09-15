@@ -3917,7 +3917,8 @@
     .case-studies-head {
       max-width: 100%;
       margin: 0 0 17px;
-      text-align: left
+      text-align: left;
+      position: relative
     }
 
     .case-studies-head .eyebrow {
@@ -6208,9 +6209,11 @@
       color: #fff !important
     }
     /* Canonical case layout. */
-    .case-brand-filters { display: inline-flex; flex-wrap: nowrap; align-items: center; gap: 8px; width: calc(100% - 205px); overflow-x: auto; scrollbar-width: none; margin-top: 18px; margin-bottom: 20px; }
+    .case-brand-filters { display: inline-flex; flex-wrap: nowrap; align-items: center; gap: 8px; width: 100%; overflow-x: auto; scrollbar-width: none; margin-top: 18px; margin-bottom: 20px; }
     .case-brand-filters::-webkit-scrollbar { display: none; }
     .case-brand-filters button { width: auto; flex: 0 0 auto; }
+    .case-studies-all-link { display: inline-flex; align-items: center; justify-content: center; position: absolute; top: 0; right: 0; min-height: 40px; padding: 0 15px; border: 1px solid var(--red); border-radius: var(--radius-control); color: var(--red); font-size: 12px; font-weight: 800; text-decoration: none; transition: background-color var(--motion-ui) var(--ease-ui), color var(--motion-ui) var(--ease-ui); }
+    .case-studies-all-link:hover, .case-studies-all-link:focus-visible { background: var(--red); color: #fff; }
     @media (min-width: 981px) {
 .case-study-track.is-filtered { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-template-rows: none; grid-auto-flow: row; grid-auto-columns: auto; gap: 14px 16px; width: 100%; }
 .case-study-track.is-filtered .case-study-card { height: auto; }
@@ -6238,7 +6241,7 @@
 
     @media (max-width: 760px) {
       .case-brand-filters { width: 100%; margin-top: 14px; margin-bottom: 10px; }
-      .case-studies-all-link { margin: 0 0 16px; }
+      .case-studies-all-link { position: static; margin: 0 0 16px; }
     }
 
     /* Canonical Hero media and responsive aspect ratios. */
@@ -7239,7 +7242,7 @@
 <div class="location-v2-consult-actions">
 <a class="location-v2-cta location-v2-cta-zalo" href="https://zalo.me/3622666363345050913" rel="noopener noreferrer" target="_blank">Nhắn Zalo</a>
 <a aria-label="Gọi Auto365 số 0365 365 365" class="location-v2-cta location-v2-cta-call" href="tel:0365365365">Gọi 0365 365 365</a>
-<a class="location-v2-cta location-v2-cta-form" href="#contact">Thông tin liên hệ</a>
+<a class="location-v2-cta location-v2-cta-form" href="#contact">Nhắn Messenger</a>
 </div>
 </article>
 <article class="location-v2-coverage-card">
@@ -7262,7 +7265,6 @@
 <small>ĐIỂM ƯU TIÊN</small>
 <h3>Auto365 – Trụ Sở Chính</h3>
 </div>
-<span>Đặt lịch trước để xác nhận cấu hình và thời gian thi công</span>
 </div>
 <article class="install-point-card location-v2-hq-card" data-branch-name="Auto365 - Trụ Sở Chính" data-region="Miền Nam">
 <figure class="location-v2-hq-media"><img alt="Auto365.vn - Trụ Sở Chính tại Thành phố Hồ Chí Minh" decoding="async" height="480" loading="lazy" src="https://raw.githubusercontent.com/NgocTrinh2026/preview-70mai/main/auto365-tru-so-chinh.webp" width="480"/></figure>
