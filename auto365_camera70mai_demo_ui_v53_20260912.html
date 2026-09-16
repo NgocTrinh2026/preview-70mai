@@ -6304,6 +6304,18 @@
       border: 1px solid #e5e7eb;
       border-radius: var(--radius-card);
       background: #fff;
+      transition: border-color var(--motion-ui) var(--ease-ui), box-shadow var(--motion-ui) var(--ease-ui);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .handover-check-card:hover {
+        border-color: rgba(201, 21, 30, .38);
+        box-shadow: 0 8px 20px rgba(16, 19, 25, .07);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .handover-check-card { transition: none; }
     }
 
     .handover-check-number {
@@ -6507,7 +6519,7 @@
     section.auto365-proof-section .auto365-proof-head .eyebrow { color: #747b81; }
     .auto365-proof-head h2 { display: block; margin: 0; color: var(--ink); font-size: clamp(30px, 3.2vw, 42px); line-height: 1.12; letter-spacing: -1px; visibility: visible; }
     .auto365-proof-points { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 0 0 24px; visibility: visible; }
-    section.auto365-proof-section .auto365-proof-point { display: flex; min-width: 0; min-height: 122px; flex-direction: column; align-items: center; gap: 8px; padding: 18px 16px; border: 1px solid #e5e7eb; border-radius: var(--radius-card); background: #fff; text-align: center; transition: transform var(--motion-ui) var(--ease-ui), border-color var(--motion-ui) var(--ease-ui), box-shadow var(--motion-ui) var(--ease-ui); }
+    section.auto365-proof-section .auto365-proof-point { display: flex; min-width: 0; min-height: 122px; flex-direction: column; align-items: center; gap: 8px; padding: 18px 16px; border: 1px solid #e5e7eb; border-radius: var(--radius-card); background: #fff; color: inherit; text-align: center; text-decoration: none; transition: transform var(--motion-ui) var(--ease-ui), border-color var(--motion-ui) var(--ease-ui), box-shadow var(--motion-ui) var(--ease-ui); }
     .auto365-proof-point strong { display: block; min-height: 0; margin: 0; color: var(--red); font-size: 17px; line-height: 1.25; }
     .auto365-proof-point p { max-width: 32ch; margin: 0; color: var(--text-muted); font-size: 13px; line-height: 1.5; }
     .auto365-proof-point::before { display: grid; width: 30px; height: 30px; place-items: center; border: 1px solid rgba(201, 21, 30, .28); border-radius: 50%; color: var(--red); font-size: 15px; font-weight: 800; line-height: 1; }
@@ -6517,6 +6529,7 @@
     @media (hover:hover) and (pointer:fine) {
       section.auto365-proof-section .auto365-proof-point:hover { transform: translateY(-2px); border-color: var(--red); box-shadow: 0 8px 18px rgba(16, 19, 25, .07); }
     }
+    section.auto365-proof-section .auto365-proof-point:focus-visible { outline: 3px solid rgba(201, 21, 30, .35); outline-offset: 3px; }
     section.auto365-proof-section .auto365-proof-video { position: relative; display: block; width: 100%; min-height: 0; aspect-ratio: 16 / 9; margin: 0; overflow: hidden; border-radius: var(--radius-card); background: #111; visibility: visible; }
     section.auto365-proof-section .auto365-proof-video .video-tile { position: absolute; inset: 0; }
     @media (max-width: 767px) {
@@ -7139,8 +7152,8 @@
 <h2>Video lắp đặt và trải nghiệm thực tế 70mai</h2>
 </div>
 </div>
-<div class="video-layout"><article class="video-card video-featured"><button aria-label="Mở video Trải nghiệm camera hành trình 70mai Dash Cam 4K" class="video-open video-tile" data-js-only="" data-video="tWgVNmB6_kU" type="button"><img alt="Trải nghiệm camera hành trình 70mai Dash Cam 4K" decoding="async" fetchpriority="low" height="540" loading="lazy" src="https://i.ytimg.com/vi/tWgVNmB6_kU/maxresdefault.jpg" width="960"/><span aria-hidden="true" class="video-play">▶</span></button><div class="video-meta"><h3 class="video-title">Trải nghiệm camera hành trình 70mai Dash Cam 4K</h3><a class="video-direct-link" href="https://www.youtube.com/watch?v=tWgVNmB6_kU" target="_blank" rel="noopener noreferrer">Xem video trên YouTube →</a></div></article>
-<div class="video-stack"><article class="video-card video-small"><button aria-label="Mở video Lắp 70mai A200 trên Mazda CX-5" class="video-open video-tile" data-js-only="" data-video="Ep107kZdics" type="button"><img alt="Lắp 70mai A200 trên Mazda CX-5" decoding="async" fetchpriority="low" height="540" loading="lazy" src="https://i.ytimg.com/vi/Ep107kZdics/maxresdefault.jpg" width="960"/><span aria-hidden="true" class="video-play">▶</span></button><div class="video-meta"><h3 class="video-title">Lắp 70mai A200 trên Mazda CX-5</h3><a class="video-direct-link" href="https://www.youtube.com/watch?v=Ep107kZdics" target="_blank" rel="noopener noreferrer">Xem video trên YouTube →</a></div></article><article class="video-card video-small"><button aria-label="Mở video Review camera hành trình 70mai A800SE SpeedEye" class="video-open video-tile" data-js-only="" data-video="oZC6poAZbJU" type="button"><img alt="Review camera hành trình 70mai A800SE SpeedEye" decoding="async" fetchpriority="low" height="540" loading="lazy" src="https://i.ytimg.com/vi/oZC6poAZbJU/maxresdefault.jpg" width="960"/><span aria-hidden="true" class="video-play">▶</span></button><div class="video-meta"><h3 class="video-title">Review camera hành trình 70mai A800SE SpeedEye</h3><a class="video-direct-link" href="https://www.youtube.com/watch?v=oZC6poAZbJU" target="_blank" rel="noopener noreferrer">Xem video trên YouTube →</a></div></article></div>
+<div class="video-layout"><article class="video-card video-featured"><button aria-label="Mở video Trải nghiệm camera hành trình 70mai Dash Cam 4K" class="video-open video-tile" data-js-only="" data-video="tWgVNmB6_kU" type="button"><img alt="Trải nghiệm camera hành trình 70mai Dash Cam 4K" decoding="async" fetchpriority="low" height="540" loading="lazy" onerror="if(!this.dataset.thumbFallback){this.dataset.thumbFallback='1';this.src=this.src.replace('/maxresdefault.jpg','/hqdefault.jpg')}else{this.remove()}" src="https://i.ytimg.com/vi/tWgVNmB6_kU/maxresdefault.jpg" width="960"/><span aria-hidden="true" class="video-play">▶</span></button><div class="video-meta"><h3 class="video-title">Trải nghiệm camera hành trình 70mai Dash Cam 4K</h3><a class="video-direct-link" href="https://www.youtube.com/watch?v=tWgVNmB6_kU" target="_blank" rel="noopener noreferrer">Xem video trên YouTube →</a></div></article>
+<div class="video-stack"><article class="video-card video-small"><button aria-label="Mở video Lắp 70mai A200 trên Mazda CX-5" class="video-open video-tile" data-js-only="" data-video="Ep107kZdics" type="button"><img alt="Lắp 70mai A200 trên Mazda CX-5" decoding="async" fetchpriority="low" height="540" loading="lazy" onerror="if(!this.dataset.thumbFallback){this.dataset.thumbFallback='1';this.src=this.src.replace('/maxresdefault.jpg','/hqdefault.jpg')}else{this.remove()}" src="https://i.ytimg.com/vi/Ep107kZdics/maxresdefault.jpg" width="960"/><span aria-hidden="true" class="video-play">▶</span></button><div class="video-meta"><h3 class="video-title">Lắp 70mai A200 trên Mazda CX-5</h3><a class="video-direct-link" href="https://www.youtube.com/watch?v=Ep107kZdics" target="_blank" rel="noopener noreferrer">Xem video trên YouTube →</a></div></article><article class="video-card video-small"><button aria-label="Mở video Review camera hành trình 70mai A800SE SpeedEye" class="video-open video-tile" data-js-only="" data-video="oZC6poAZbJU" type="button"><img alt="Review camera hành trình 70mai A800SE SpeedEye" decoding="async" fetchpriority="low" height="540" loading="lazy" onerror="if(!this.dataset.thumbFallback){this.dataset.thumbFallback='1';this.src=this.src.replace('/maxresdefault.jpg','/hqdefault.jpg')}else{this.remove()}" src="https://i.ytimg.com/vi/oZC6poAZbJU/maxresdefault.jpg" width="960"/><span aria-hidden="true" class="video-play">▶</span></button><div class="video-meta"><h3 class="video-title">Review camera hành trình 70mai A800SE SpeedEye</h3><a class="video-direct-link" href="https://www.youtube.com/watch?v=oZC6poAZbJU" target="_blank" rel="noopener noreferrer">Xem video trên YouTube →</a></div></article></div>
 </div>
 </div>
 </section>
@@ -7451,11 +7464,11 @@
 <div class="wrap">
 <div class="auto365-proof-head"><div class="eyebrow">ĐỒNG HÀNH CÙNG AUTO365</div><h2 id="auto365-proof-title">Vì sao nên lắp camera 70mai tại Auto365?</h2></div>
 <div class="auto365-proof-points">
-<article class="auto365-proof-point"><strong>Nhiều điểm lắp thuận tiện</strong><p>Chọn khu vực và liên hệ điểm Auto365 để xác nhận cấu hình, lịch lắp phù hợp. <a href="#lap-dat-theo-khu-vuc">Xem điểm lắp →</a></p></article>
-<article class="auto365-proof-point"><strong>Nhiều case đã lắp 70mai hoàn thiện</strong><p>Tham khảo mẫu xe và cấu hình thực tế trước khi chọn camera. <a href="#case-studies">Xem xe đã lắp →</a></p></article>
-<article class="auto365-proof-point"><strong>Quy trình lắp đặt chuyên nghiệp</strong><p>Kiểm tra thiết bị, kết nối và bàn giao trước khi nhận xe. <a href="#truoc-khi-nhan-xe">Xem hướng dẫn →</a></p></article>
+<a class="auto365-proof-point" href="#lap-dat-theo-khu-vuc"><strong>Nhiều điểm lắp thuận tiện</strong><p>Chọn khu vực và liên hệ điểm Auto365 để xác nhận cấu hình, lịch lắp phù hợp.</p></a>
+<a class="auto365-proof-point" href="#case-studies"><strong>Nhiều mẫu xe đã lắp camera 70mai</strong><p>Tham khảo mẫu xe và cấu hình thực tế trước khi chọn camera.</p></a>
+<a class="auto365-proof-point" href="#truoc-khi-nhan-xe"><strong>Quy trình lắp đặt chuyên nghiệp</strong><p>Kiểm tra thiết bị, kết nối và bàn giao trước khi nhận xe.</p></a>
 </div>
-<article class="video-card video-featured auto365-proof-video"><button aria-label="Mở video Nhìn lại chặng đường 7 năm của 365 Group" class="video-open video-tile" data-js-only="" data-video="NXoGC4j_lj4" type="button"><img alt="Video đồng hành cùng Auto365" decoding="async" fetchpriority="low" height="720" loading="lazy" src="https://i.ytimg.com/vi/NXoGC4j_lj4/maxresdefault.jpg" width="1280"/><span aria-hidden="true" class="video-play">▶</span></button><div class="video-meta"><h3 class="video-title">Nhìn lại chặng đường 7 năm của 365 Group</h3><p class="video-caption">Video sự kiện tri ân đối tác, từ kênh Auto365 Review.</p><a class="video-direct-link" href="https://www.youtube.com/watch?v=NXoGC4j_lj4" target="_blank" rel="noopener noreferrer">Xem video trên YouTube →</a></div></article>
+<article class="video-card video-featured auto365-proof-video"><button aria-label="Mở video Nhìn lại chặng đường 7 năm của 365 Group" class="video-open video-tile" data-js-only="" data-video="NXoGC4j_lj4" type="button"><img alt="Nhìn lại chặng đường 7 năm của 365 Group" decoding="async" fetchpriority="low" height="720" loading="lazy" onerror="if(!this.dataset.thumbFallback){this.dataset.thumbFallback='1';this.src=this.src.replace('/maxresdefault.jpg','/hqdefault.jpg')}else{this.remove()}" src="https://i.ytimg.com/vi/NXoGC4j_lj4/maxresdefault.jpg" width="1280"/><span aria-hidden="true" class="video-play">▶</span></button><div class="video-meta"><h3 class="video-title">Nhìn lại chặng đường 7 năm của 365 Group</h3><p class="video-caption">Video sự kiện tri ân đối tác, từ kênh Auto365 Review.</p><a class="video-direct-link" href="https://www.youtube.com/watch?v=NXoGC4j_lj4" target="_blank" rel="noopener noreferrer">Xem video trên YouTube →</a></div></article>
 </div>
 </section>
 <section aria-labelledby="handover-check-title" class="handover-check-section" id="truoc-khi-nhan-xe">
