@@ -2776,10 +2776,11 @@
 
       #videos .video-featured,
       #videos .video-small {
-        flex: 0 0 100%;
-        width: 100%;
-        min-width: 100%;
-        max-width: 100%;
+        flex: 0 0 calc(100% - 32px);
+        width: calc(100% - 32px);
+        min-width: calc(100% - 32px);
+        max-width: calc(100% - 32px);
+        aspect-ratio: 16 / 9;
         scroll-snap-align: start;
         scroll-snap-stop: always;
         box-sizing: border-box;
@@ -6596,6 +6597,14 @@
       .hybrid-decision-table::after { display: none !important; }
     }
     @media (max-width: 760px) {
+      .video-layout .video-card {
+        aspect-ratio: 16 / 9;
+        min-height: 0;
+      }
+      .video-layout .video-card .video-tile,
+      .video-layout .video-card img {
+        height: 100%;
+      }
       .video-layout,
       .guide-viewport,
       .location-v2-branch-list,
@@ -6640,6 +6649,33 @@
       .install-process-list > * {
         flex-basis: calc(100% - 32px);
         min-width: calc(100% - 32px);
+      }
+      .video-layout::after,
+      .guide-viewport::after,
+      .location-v2-branch-list::after,
+      .install-process-list::after,
+      .products-wrap .products-next,
+      .hybrid-decision-table::after {
+        width: 30px !important;
+        height: 30px !important;
+        padding: 0 !important;
+        border: 1px solid var(--red) !important;
+        border-radius: 50% !important;
+        background: rgba(255,255,255,.94) !important;
+        color: var(--red) !important;
+        font-size: 17px !important;
+        line-height: 1 !important;
+        opacity: 1;
+        transition: opacity .2s ease, transform .2s ease;
+      }
+      .video-layout.is-scrolled::after,
+      .guide-viewport.is-scrolled::after,
+      .location-v2-branch-list.is-scrolled::after,
+      .install-process-list.is-scrolled::after,
+      .products-wrap.is-scrolled .products-next,
+      .hybrid-decision-table.is-scrolled::after {
+        opacity: 0;
+        pointer-events: none;
       }
     }
     </style>
@@ -8681,9 +8717,32 @@ $$('.video-open').forEach(b => {
 
     })();</script>
 <script>
-  document.getElementById('products-next')?.addEventListener('click', () => {
-    document.getElementById('product-grid')?.scrollBy({ left: document.getElementById('product-grid').clientWidth * 0.82, behavior: 'smooth' });
-  });
+  (() => {
+    const productGrid = document.getElementById('product-grid');
+    document.getElementById('products-next')?.addEventListener('click', () => {
+      productGrid?.scrollBy({ left: productGrid.clientWidth * 0.82, behavior: 'smooth' });
+    });
+
+    const scrollTargets = [
+      productGrid,
+      document.querySelector('#videos .video-layout'),
+      document.querySelector('.guide-viewport'),
+      document.querySelector('.location-v2-branch-list'),
+      document.querySelector('.install-process-list'),
+      document.querySelector('.hybrid-decision-table tbody')
+    ].filter(Boolean);
+
+    const syncArrow = (element) => {
+      const moved = element.scrollLeft > 4;
+      element.classList.toggle('is-scrolled', moved);
+      element.closest('.products-wrap')?.classList.toggle('is-scrolled', moved);
+    };
+
+    scrollTargets.forEach((element) => {
+      element.addEventListener('scroll', () => syncArrow(element), { passive: true });
+      syncArrow(element);
+    });
+  })();
 </script>
 </body>
 </html>
