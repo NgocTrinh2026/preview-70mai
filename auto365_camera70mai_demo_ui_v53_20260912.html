@@ -28,12 +28,12 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <style id="auto365-demo-css">
     :root {
-      --red: #c9151e;
-      --red2: #a90f17;
+      --red: #b92d35;
+      --red2: #97262d;
       --ink: #101319;
       --muted: #697078;
       --line: #e3e5e6;
-      --soft: #f5f5f3;
+      --soft: #f2f3f1;
       --shadow: 0 18px 45px rgba(16, 19, 25, .10);
       --radius-card: 10px;
       --radius-control: 5px;
@@ -54,7 +54,7 @@
 
     body {
       margin: 0;
-      background: #fafafa;
+      background: #f4f5f3;
       color: var(--ink);
       -webkit-font-smoothing: antialiased;
     }
@@ -1830,16 +1830,16 @@
     .install-cost-section,
     .install-location-section,
     .faq-section {
-      padding-top: 56px;
-      padding-bottom: 56px;
+      padding-top: 50px;
+      padding-bottom: 50px;
     }
 
     .install-cost-section {
-      padding-bottom: 44px;
+      padding-bottom: 40px;
     }
 
     .install-location-section {
-      padding-top: 44px;
+      padding-top: 40px;
     }
 
     .location-advice-card {
@@ -1857,16 +1857,16 @@
       .install-cost-section,
       .install-location-section,
       .faq-section {
-        padding-top: 48px;
-        padding-bottom: 48px;
+        padding-top: 42px;
+        padding-bottom: 42px;
       }
 
       .install-cost-section {
-        padding-bottom: 38px;
+        padding-bottom: 34px;
       }
 
       .install-location-section {
-        padding-top: 38px;
+        padding-top: 34px;
       }
     }
 
@@ -2435,15 +2435,15 @@
     }
 
     .section {
-      padding: 72px 0;
+      padding: 60px 0;
     }
 
     .section-head {
-      margin-bottom: 28px;
+      margin-bottom: 22px;
     }
 
     .section-head h2 {
-      font-size: clamp(34px, 3.6vw, 46px);
+      font-size: clamp(31px, 3.2vw, 42px);
       line-height: 1.08;
       letter-spacing: -1.45px;
     }
@@ -2506,11 +2506,11 @@
 
     @media (max-width:760px) {
       .section {
-        padding: 54px 0;
+        padding: 44px 0;
       }
 
       .section-head h2 {
-        font-size: 31px !important;
+        font-size: 29px !important;
         letter-spacing: -1px;
       }
 
@@ -6178,22 +6178,17 @@
     .hero .hero-actions .btn-red:focus-visible,
     .hero-carousel .hero-actions .btn-red:hover,
     .hero-carousel .hero-actions .btn-red:focus-visible {
-      background: #a91018 !important;
-      border-color: #a91018 !important;
+      background: var(--red2) !important;
+      border-color: var(--red2) !important;
       color: #fff !important
     }
-    /* v22: slightly brighter neutral surfaces. */
-    :root {
-      --soft: #fafafa
-    }
-
     .install-location-section {
-      background: #f8f9f9
+      background: var(--soft)
     }
 
     .detail-specs div,
     .compare-table tbody th {
-      background: #fafafa
+      background: var(--soft)
     }
     /* v23: primary action for the comparison bar. */
     #compare-bar #open-compare {
@@ -6204,8 +6199,8 @@
 
     #compare-bar #open-compare:hover,
     #compare-bar #open-compare:focus-visible {
-      background: #a91018 !important;
-      border-color: #a91018 !important;
+      background: var(--red2) !important;
+      border-color: var(--red2) !important;
       color: #fff !important
     }
     /* Canonical case layout. */
@@ -6513,11 +6508,11 @@
       }
     }
 
-    .auto365-proof-section { display: block; visibility: visible; padding: 48px 0 56px; }
+    .auto365-proof-section { display: block; visibility: visible; padding: 40px 0 44px; }
     .auto365-proof-section > .wrap { display: block; visibility: visible; }
     .auto365-proof-head { display: block; max-width: 760px; margin: 0 auto 24px; text-align: center; visibility: visible; }
     section.auto365-proof-section .auto365-proof-head .eyebrow { color: #747b81; }
-    .auto365-proof-head h2 { display: block; margin: 0; color: var(--ink); font-size: clamp(30px, 3.2vw, 42px); line-height: 1.12; letter-spacing: -1px; visibility: visible; }
+    .auto365-proof-head h2 { display: block; margin: 0; color: var(--ink); font-size: clamp(28px, 2.9vw, 38px); line-height: 1.12; letter-spacing: -1px; visibility: visible; }
     .auto365-proof-points { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 0 0 24px; visibility: visible; }
     section.auto365-proof-section .auto365-proof-point { display: flex; min-width: 0; min-height: 122px; flex-direction: column; align-items: center; gap: 8px; padding: 18px 16px; border: 1px solid #e5e7eb; border-radius: var(--radius-card); background: #fff; color: inherit; text-align: center; text-decoration: none; transition: transform var(--motion-ui) var(--ease-ui), border-color var(--motion-ui) var(--ease-ui), box-shadow var(--motion-ui) var(--ease-ui); }
     .auto365-proof-point strong { display: block; min-height: 0; margin: 0; color: var(--red); font-size: 17px; line-height: 1.25; }
@@ -6533,7 +6528,7 @@
     section.auto365-proof-section .auto365-proof-video { position: relative; display: block; width: 100%; min-height: 0; aspect-ratio: 16 / 9; margin: 0; overflow: hidden; border-radius: var(--radius-card); background: #111; visibility: visible; }
     section.auto365-proof-section .auto365-proof-video .video-tile { position: absolute; inset: 0; }
     @media (max-width: 767px) {
-      .auto365-proof-section { padding: 40px 0 46px; }
+      .auto365-proof-section { padding: 34px 0 38px; }
       .auto365-proof-points { grid-template-columns: 1fr; gap: 12px; }
       .auto365-proof-point { min-height: 0; }
       .auto365-proof-video { aspect-ratio: 16 / 9; }
@@ -7467,7 +7462,7 @@
 <a class="auto365-proof-point" href="#case-studies"><strong>Nhiều mẫu xe đã lắp camera 70mai</strong><p>Tham khảo mẫu xe và cấu hình thực tế trước khi chọn camera.</p></a>
 <a class="auto365-proof-point" href="#truoc-khi-nhan-xe"><strong>Kiểm tra trước khi nhận xe</strong><p>Kiểm tra thiết bị, kết nối và bàn giao trước khi nhận xe.</p></a>
 </div>
-<article class="video-card video-featured auto365-proof-video"><button aria-label="Mở video Nhìn lại chặng đường 7 năm của 365 Group" class="video-open video-tile" data-js-only="" data-video="NXoGC4j_lj4" type="button"><img alt="Nhìn lại chặng đường 7 năm của 365 Group" decoding="async" fetchpriority="low" height="720" loading="lazy" onerror="if(!this.dataset.thumbFallback){this.dataset.thumbFallback='1';this.src=this.src.replace('/maxresdefault.jpg','/hqdefault.jpg')}else{this.remove()}" src="https://i.ytimg.com/vi/NXoGC4j_lj4/maxresdefault.jpg" width="1280"/><span aria-hidden="true" class="video-play">▶</span></button><div class="video-meta"><h3 class="video-title">Nhìn lại chặng đường 7 năm của 365 Group</h3><p class="video-caption">Video sự kiện tri ân đối tác, từ kênh Auto365 Review.</p><a class="video-direct-link" href="https://www.youtube.com/watch?v=NXoGC4j_lj4" target="_blank" rel="noopener noreferrer">Xem video trên YouTube →</a></div></article>
+<article class="video-card video-featured auto365-proof-video"><button aria-label="Mở video giới thiệu Auto365" class="video-open video-tile" data-js-only="" data-video="HXpXBhh6fPU" type="button"><img alt="Video giới thiệu Auto365" decoding="async" fetchpriority="low" height="720" loading="lazy" onerror="if(!this.dataset.thumbFallback){this.dataset.thumbFallback='1';this.src=this.src.replace('/maxresdefault.jpg','/hqdefault.jpg')}else{this.remove()}" src="https://i.ytimg.com/vi/HXpXBhh6fPU/maxresdefault.jpg" width="1280"/><span aria-hidden="true" class="video-play">▶</span></button><div class="video-meta"><h3 class="video-title">Video giới thiệu Auto365</h3><p class="video-caption">Xem video từ YouTube.</p><a class="video-direct-link" href="https://www.youtube.com/watch?v=HXpXBhh6fPU" target="_blank" rel="noopener noreferrer">Xem video trên YouTube →</a></div></article>
 </div>
 </section>
 <section aria-labelledby="handover-check-title" class="handover-check-section" id="truoc-khi-nhan-xe">
