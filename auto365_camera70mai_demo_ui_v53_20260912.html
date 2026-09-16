@@ -6507,16 +6507,22 @@
     section.auto365-proof-section .auto365-proof-head .eyebrow { color: #747b81; }
     .auto365-proof-head h2 { display: block; margin: 0; color: var(--ink); font-size: clamp(30px, 3.2vw, 42px); line-height: 1.12; letter-spacing: -1px; visibility: visible; }
     .auto365-proof-points { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 0 0 24px; visibility: visible; }
-    section.auto365-proof-section .auto365-proof-point { display: flex; min-width: 0; min-height: 122px; flex-direction: column; align-items: center; padding: 18px 16px; border: 1px solid #e5e7eb; border-radius: var(--radius-card); background: #fff; text-align: center; }
-    .auto365-proof-point strong { display: block; min-height: 44px; margin-bottom: 7px; color: var(--red); font-size: 17px; line-height: 1.25; }
+    section.auto365-proof-section .auto365-proof-point { display: flex; min-width: 0; min-height: 122px; flex-direction: column; align-items: center; gap: 8px; padding: 18px 16px; border: 1px solid #e5e7eb; border-radius: var(--radius-card); background: #fff; text-align: center; transition: transform var(--motion-ui) var(--ease-ui), border-color var(--motion-ui) var(--ease-ui), box-shadow var(--motion-ui) var(--ease-ui); }
+    .auto365-proof-point strong { display: block; min-height: 0; margin: 0; color: var(--red); font-size: 17px; line-height: 1.25; }
     .auto365-proof-point p { max-width: 32ch; margin: 0; color: var(--text-muted); font-size: 13px; line-height: 1.5; }
+    .auto365-proof-point::before { display: grid; width: 30px; height: 30px; place-items: center; border: 1px solid rgba(201, 21, 30, .28); border-radius: 50%; color: var(--red); font-size: 15px; font-weight: 800; line-height: 1; }
+    .auto365-proof-point:nth-child(1)::before { content: "⌖"; }
+    .auto365-proof-point:nth-child(2)::before { content: "✦"; }
+    .auto365-proof-point:nth-child(3)::before { content: "✓"; }
+    @media (hover:hover) and (pointer:fine) {
+      section.auto365-proof-section .auto365-proof-point:hover { transform: translateY(-2px); border-color: var(--red); box-shadow: 0 8px 18px rgba(16, 19, 25, .07); }
+    }
     section.auto365-proof-section .auto365-proof-image { display: block; width: 100%; height: auto; margin: 0; overflow: hidden; border-radius: var(--radius-card); background: #f7f8f9; visibility: visible; }
     section.auto365-proof-section .auto365-proof-image img { display: block; width: 100%; height: auto; object-fit: contain; object-position: center; }
     @media (max-width: 767px) {
       .auto365-proof-section { padding: 40px 0 46px; }
       .auto365-proof-points { grid-template-columns: 1fr; gap: 12px; }
       .auto365-proof-point { min-height: 0; }
-      .auto365-proof-point strong { min-height: 0; }
       .auto365-proof-image { aspect-ratio: auto; }
     }</style>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -7445,9 +7451,9 @@
 <div class="wrap">
 <div class="auto365-proof-head"><div class="eyebrow">ĐỒNG HÀNH CÙNG AUTO365</div><h2 id="auto365-proof-title">Vì sao nên lắp camera 70mai tại Auto365?</h2></div>
 <div class="auto365-proof-points">
-<article class="auto365-proof-point"><strong>91 điểm lắp trên toàn quốc</strong><p>Dễ tìm điểm lắp phù hợp tại 33 tỉnh/thành.</p></article>
-<article class="auto365-proof-point"><strong>Đội ngũ nhân viên tay nghề cao</strong><p>Kỹ thuật viên kiểm tra, thi công và hướng dẫn sử dụng camera theo cấu hình đã chọn.</p></article>
-<article class="auto365-proof-point"><strong>Quy trình lắp đặt rõ ràng</strong><p>Kiểm tra hình ảnh, ứng dụng, bộ nhớ và hướng dẫn sử dụng trước khi bàn giao.</p></article>
+<article class="auto365-proof-point"><strong>91 điểm lắp đặt toàn quốc</strong><p>Dễ dàng tìm điểm Auto365 phù hợp tại 33 tỉnh/thành.</p></article>
+<article class="auto365-proof-point"><strong>Đội ngũ kỹ thuật viên tay nghề cao</strong><p>Tư vấn, thi công và hướng dẫn sử dụng theo cấu hình đã chọn.</p></article>
+<article class="auto365-proof-point"><strong>Quy trình lắp đặt rõ ràng</strong><p>Kiểm tra thiết bị, kết nối và bàn giao trước khi nhận xe.</p></article>
 </div>
 <figure class="auto365-proof-image"><img alt="Đội ngũ Auto365 tại sự kiện 70mai Việt Nam" decoding="async" height="875" loading="lazy" src="https://auto365.vn/uploads/images/tin%20t%E1%BB%A9c/T11/02/tri-an-he-thong-auto365.png.webp" width="2000"/></figure>
 </div>
