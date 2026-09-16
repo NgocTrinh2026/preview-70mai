@@ -793,7 +793,7 @@
 
     /* Location network V2 — canonical component, inspired by Auto365 system presentation. */
     .location-network-v2 {
-      padding: 42px 0;
+      padding: 24px 0;
       background: #f6f7f7;
       border-top: 1px solid #e6e8e9;
       border-bottom: 1px solid #e6e8e9;
@@ -807,7 +807,7 @@
     .location-v2-head h2 {
       margin: 7px 0 8px;
       max-width: 780px;
-      font-size: clamp(31px, 3.2vw, 42px);
+      font-size: clamp(26px, 2.6vw, 34px);
       line-height: 1.08;
       letter-spacing: -1.15px;
       text-wrap: balance;
@@ -1830,16 +1830,16 @@
     .install-cost-section,
     .install-location-section,
     .faq-section {
-      padding-top: 50px;
-      padding-bottom: 50px;
+      padding-top: 30px;
+      padding-bottom: 30px;
     }
 
     .install-cost-section {
-      padding-bottom: 40px;
+      padding-bottom: 28px;
     }
 
     .install-location-section {
-      padding-top: 40px;
+      padding-top: 28px;
     }
 
     .location-advice-card {
@@ -1857,16 +1857,16 @@
       .install-cost-section,
       .install-location-section,
       .faq-section {
-        padding-top: 42px;
-        padding-bottom: 42px;
+        padding-top: 30px;
+        padding-bottom: 30px;
       }
 
       .install-cost-section {
-        padding-bottom: 34px;
+        padding-bottom: 26px;
       }
 
       .install-location-section {
-        padding-top: 34px;
+        padding-top: 26px;
       }
     }
 
@@ -1877,16 +1877,16 @@
       .install-cost-section,
       .install-location-section,
       .faq-section {
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding-top: 26px;
+        padding-bottom: 26px;
       }
 
       .install-cost-section {
-        padding-bottom: 32px;
+        padding-bottom: 24px;
       }
 
       .install-location-section {
-        padding-top: 32px;
+        padding-top: 24px;
       }
     }
 
@@ -2435,7 +2435,7 @@
     }
 
     .section {
-      padding: 60px 0;
+      padding: 40px 0;
     }
 
     .section-head {
@@ -2443,7 +2443,7 @@
     }
 
     .section-head h2 {
-      font-size: clamp(31px, 3.2vw, 42px);
+      font-size: clamp(28px, 2.8vw, 38px);
       line-height: 1.08;
       letter-spacing: -1.45px;
     }
@@ -2506,7 +2506,7 @@
 
     @media (max-width:760px) {
       .section {
-        padding: 44px 0;
+        padding: 38px 0;
       }
 
       .section-head h2 {
@@ -3927,7 +3927,7 @@
 
     .case-studies-head h2 {
       margin: 0;
-      font-size: clamp(34px, 3.6vw, 46px);
+      font-size: clamp(24px, 2.5vw, 34px);
       line-height: 1.08;
       letter-spacing: -1.45px
     }
@@ -4267,8 +4267,8 @@
     }
 
     #products {
-      padding-top: 22px;
-      padding-bottom: 20px
+      padding-top: 10px;
+      padding-bottom: 14px
     }
 
     .catalog-toolbar {
@@ -4534,10 +4534,12 @@
 
     .products {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(5, minmax(0, 1fr));
       gap: 14px;
       align-items: stretch
     }
+
+    .products-next { display: none; }
 
     .product-card {
       display: grid;
@@ -4650,8 +4652,8 @@
 
     .product-body h3 {
       display: -webkit-box;
-      min-height: 46px;
-      margin: 0 0 7px;
+      min-height: 34px;
+      margin: 0 0 3px;
       overflow: hidden;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 2;
@@ -4682,12 +4684,12 @@
     }
 
     .product-chips span {
-      min-height: 25px;
-      padding: 5px 7px;
+      min-height: 21px;
+      padding: 3px 5px;
       background: #f1f2f2;
       color: #50585e;
       border-radius: 3px;
-      font-size: 12px;
+      font-size: 10px;
       font-weight: 750;
       line-height: 1.3;
       white-space: nowrap
@@ -4954,14 +4956,55 @@
         padding-bottom: 4px
       }
 
+      .products-wrap {
+        position: relative;
+      }
+
+      .products-next {
+        display: grid !important;
+        position: absolute;
+        z-index: 2;
+        top: 46%;
+        right: 4px;
+        width: 32px;
+        height: 32px;
+        place-items: center;
+        border: 1px solid var(--red);
+        border-radius: 50%;
+        background: rgba(255,255,255,.94);
+        color: var(--red);
+        font-size: 18px;
+        line-height: 1;
+        box-shadow: 0 4px 12px rgba(16,19,25,.12);
+      }
+
+      .case-study-viewport::after,
+      .hybrid-decision-table::after {
+        content: "→";
+        position: absolute;
+        z-index: 2;
+        top: 46%;
+        right: 5px;
+        display: grid !important;
+        width: 30px;
+        height: 30px;
+        place-items: center;
+        border: 1px solid var(--red);
+        border-radius: 50%;
+        background: rgba(255,255,255,.94);
+        color: var(--red);
+        font-size: 17px;
+        box-shadow: 0 4px 12px rgba(16,19,25,.12);
+        pointer-events: none;
+      }
       .products::-webkit-scrollbar {
         display: none
       }
 
       .product-card {
-        flex: 0 0 100%;
-        min-width: 100%;
-        max-width: 100%;
+        flex: 0 0 calc(100% - 42px);
+        min-width: calc(100% - 42px);
+        max-width: calc(100% - 42px);
         grid-template-rows: 235px minmax(0, 1fr);
         scroll-snap-align: start
       }
@@ -4981,8 +5024,9 @@
       }
 
       .product-body h3 {
-        min-height: 44px;
-        font-size: 18px
+        min-height: 34px;
+        margin-bottom: 3px;
+        font-size: 14px
       }
 
       .product-actions {
@@ -5207,6 +5251,20 @@
         overflow: visible
       }
 
+      .hybrid-decision-table {
+        position: relative;
+      }
+
+      .hybrid-decision-table::before {
+        content: "Vuốt để xem thêm →";
+        display: block;
+        margin: 0 0 8px;
+        color: var(--red);
+        font-size: 11px;
+        font-weight: 800;
+        text-align: right;
+      }
+
       .hybrid-decision-table table,
       .hybrid-decision-table tbody {
         display: block;
@@ -5335,7 +5393,7 @@
     }
 
     #guide {
-      padding: 44px 0 46px
+      padding: 28px 0 30px
     }
 
     .guide-head {
@@ -5470,7 +5528,7 @@
 
     @media(max-width:760px) {
       #guide {
-        padding: 36px 0 38px
+        padding: 28px 0 30px
       }
 
       .guide-head {
@@ -5541,7 +5599,7 @@
 
     .faq-clean-intro h2 {
       margin: 7px 0 12px;
-      font-size: clamp(31px, 3.2vw, 42px);
+      font-size: clamp(26px, 2.6vw, 34px);
       line-height: 1.08;
       letter-spacing: -1.3px;
     }
@@ -5609,7 +5667,7 @@
     }
 
     .trust-section {
-      padding: 38px 0;
+      padding: 30px 0;
       background: #fff;
       border-top: 1px solid #e3e5e6;
     }
@@ -5980,7 +6038,7 @@
 
     .hero-carousel-copy h1,
     .hero-carousel-copy h2 {
-      font-size: clamp(40px, 4.4vw, 60px);
+      font-size: clamp(34px, 3.4vw, 46px);
       line-height: 1.05;
       letter-spacing: -1.8px;
     }
@@ -5993,7 +6051,7 @@
     .section-head h2,
     .trust-head h2,
     .faq-clean-intro h2 {
-      font-size: clamp(28px, 3.2vw, 42px);
+      font-size: clamp(24px, 2.5vw, 34px);
       line-height: 1.12;
       letter-spacing: -.8px;
     }
@@ -6005,7 +6063,7 @@
     }
 
     .product-title-link {
-      font-size: 16px;
+      font-size: 14px;
       line-height: 1.3;
     }
 
@@ -6037,7 +6095,7 @@
     @media(max-width:760px) {
       .hero-carousel-copy h1,
       .hero-carousel-copy h2 {
-        font-size: clamp(32px, 9vw, 44px);
+        font-size: clamp(28px, 7.5vw, 36px);
         letter-spacing: -1px;
       }
 
@@ -6048,7 +6106,7 @@
       .section-head h2,
       .trust-head h2,
       .faq-clean-intro h2 {
-        font-size: 30px;
+        font-size: 26px;
       }
 
       .hybrid-decision-table td {
@@ -6121,18 +6179,18 @@
     }
     /* v17: reduce the visual gap between the final content sections. */
     #guide {
-      padding-top: 40px !important;
-      padding-bottom: 44px !important
+      padding-top: 24px !important;
+      padding-bottom: 28px !important
     }
 
     #faq {
-      padding-top: 44px !important;
-      padding-bottom: 44px !important
+      padding-top: 24px !important;
+      padding-bottom: 28px !important
     }
 
     #kiem-duyet-thong-tin {
-      padding-top: 34px !important;
-      padding-bottom: 34px !important
+      padding-top: 24px !important;
+      padding-bottom: 28px !important
     }
 
     /* v18: selected comparison state and recommendation actions. */
@@ -6272,7 +6330,7 @@
     }
 
     .handover-check-section {
-      padding: 36px 0 40px;
+      padding: 24px 0 28px;
     }
 
     .handover-check-layout {
@@ -6388,14 +6446,14 @@
     }
 
     @media (max-width: 600px) {
-      .handover-check-section { padding: 30px 0 34px; }
+      .handover-check-section { padding: 24px 0 28px; }
       .handover-check-grid { grid-template-columns: 1fr; gap: 12px; }
       .handover-check-card { padding: 18px 16px; }
       .handover-video { margin-top: 28px; }
     }
 
     .install-process-section {
-      padding: 52px 0 56px;
+      padding: 28px 0 32px;
     }
 
     .install-process-list {
@@ -6481,7 +6539,7 @@
 
     @media (max-width:767px) {
       .install-process-section {
-        padding: 44px 0 48px;
+        padding: 30px 0 34px;
       }
 
       .install-process-list {
@@ -6508,7 +6566,7 @@
       }
     }
 
-    .auto365-proof-section { display: block; visibility: visible; padding: 40px 0 44px; }
+    .auto365-proof-section { display: block; visibility: visible; padding: 24px 0 28px; }
     .auto365-proof-section > .wrap { display: block; visibility: visible; }
     .auto365-proof-head { display: block; max-width: 760px; margin: 0 auto 24px; text-align: center; visibility: visible; }
     section.auto365-proof-section .auto365-proof-head .eyebrow { color: #747b81; }
@@ -6528,11 +6586,18 @@
     section.auto365-proof-section .auto365-proof-video { position: relative; display: block; width: 100%; min-height: 0; aspect-ratio: 16 / 9; margin: 0; overflow: hidden; border-radius: var(--radius-card); background: #111; visibility: visible; }
     section.auto365-proof-section .auto365-proof-video .video-tile { position: absolute; inset: 0; }
     @media (max-width: 767px) {
-      .auto365-proof-section { padding: 34px 0 38px; }
+      .auto365-proof-section { padding: 26px 0 30px; }
       .auto365-proof-points { grid-template-columns: 1fr; gap: 12px; }
       .auto365-proof-point { min-height: 0; }
       .auto365-proof-video { aspect-ratio: 16 / 9; }
-    }</style>
+    }
+    @media (min-width: 761px) {
+      .products-next,
+      .case-study-viewport::after,
+      .hybrid-decision-table::before,
+      .hybrid-decision-table::after { display: none !important; }
+    }
+    </style>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 </head>
@@ -6788,6 +6853,7 @@
               365</a> để được tư vấn cấu hình.</p>
 </noscript>
 <p aria-live="polite" class="product-count" id="product-count" role="status"></p>
+<div class="products-wrap">
 <div class="products" id="product-grid">
 <article class="product-card" data-id="m310-plus-2k" data-sales-status="active" data-status-tags="active">
 <div class="product-media"><a aria-label="Xem 70mai M310 Plus 2K" class="product-media-link" href="https://auto365.vn/camera-hanh-trinh-70mai-m310-plus-2k"><img alt="70mai M310 Plus 2K" decoding="async" fetchpriority="low" height="640" loading="lazy" src="https://auto365.vn/uploads/images/products/auto365vn-m310-plus-2k-1jpg-img_6a1eab320a74f8.58972133_auto365vn-1780394802-0.jpg.webp" width="640"/></a>
@@ -7052,6 +7118,8 @@
 </div>
 </div>
 </article>
+</div>
+<button aria-label="Xem sản phẩm tiếp theo" class="products-next" data-js-only="" id="products-next" type="button">→</button>
 </div>
 <div class="load-more"><button class="btn btn-outline" id="load-more" type="button">Xem tất cả sản phẩm</button>
 </div>
@@ -7900,7 +7968,11 @@
 
       if (typeof document !== 'undefined') {
         document.documentElement.classList.add('js-ready');
-        document.querySelectorAll('.case-study-cta').forEach(el => { el.textContent = 'Xem ca lắp thực tế →' });
+        document.querySelectorAll('.case-study-cta').forEach(el => { el.textContent = 'Xem chi tiết lắp đặt →' });
+        document.querySelectorAll('.case-study-link[aria-label]').forEach(el => { el.setAttribute('aria-label', el.getAttribute('aria-label').replace('Xem ca lắp', 'Xem chi tiết lắp đặt')) });
+        document.querySelector('.case-brand-filters')?.setAttribute('aria-label', 'Lọc xe theo thương hiệu');
+        const proofCaption = document.querySelector('.auto365-proof-video .video-caption');
+        if (proofCaption) proofCaption.textContent = 'Giới thiệu hệ thống chăm sóc và nâng cấp xe Auto365, từ kênh Auto365 Review.';
         window.dataLayer = window.dataLayer || [];
         const state = { tab: "all", query: "", expanded: false, compare: [], advanced: { price: [], res: [], feature: [], status: [] } }; const $ = s => document.querySelector(s), $$ = s => Array.from(document.querySelectorAll(s)); const norm = s => normalizeFilterText(s); const pById = id => PRODUCTS.find(p => p.id === id); const catalogPrice = p => { const v = catalogPriceForState(p, state.tab, state.advanced.price); return Number.isFinite(v) ? v : Infinity; }; const money = n => Number.isFinite(n) ? new Intl.NumberFormat("vi-VN").format(n) + "đ" : "Liên hệ"; const salesLabel = p => p?.salesStatus === "discontinued" ? "Ngừng kinh doanh" : "Đang bán"; function visibleStatusBadgesHTML(p) { const tags = p?.statusTags || []; const visible = []; if (tags.includes("bestseller")) visible.push(["is-bestseller", "Bán chạy"]); if (tags.includes("new")) visible.push(["is-new", "Mới"]); if (!visible.length && p?.salesStatus === "discontinued") visible.push(["is-discontinued", "Ngừng kinh doanh"]); return visible.map(([cls, label]) => `<span class="product-status-badge ${cls}">${label}</span>`).join(" ") } function comparePriceLabel(p) { return money(p?.displayPrice) } const specValue = (p, key) => p?.pdpSpecs?.[key] || ""; const specKnown = v => { const t = norm(v); return !!t && !t.includes("chua duoc hang cong bo") && !t.includes("khong ho tro") && !t.includes("khong co") }; const specText = (p, keys) => norm(keys.map(k => specValue(p, k)).join(" ")); const specHas = (p, key, token) => specKnown(specValue(p, key)) && norm(specValue(p, key)).includes(norm(token));
         // Capability fields come from product/PDP data; prices are evaluated at package/configuration level.
@@ -8002,7 +8074,7 @@
             mode === "default" &&
             !af.price.length && !af.res.length && !af.feature.length && !af.status.length;
 
-          const visible = useLimit ? list.slice(0, 8) : list;
+          const visible = useLimit ? list.slice(0, 10) : list;
           const visibleIds = new Set(visible.map(p => p.id));
           const matchedIds = new Set(list.map(p => p.id));
 
@@ -8040,8 +8112,8 @@
 
           const more = $("#load-more");
           if (more) {
-            more.hidden = !(state.tab === "all" && !state.query && mode === "default" && !Object.values(af).some(x => x.length) && list.length > 8);
-            more.textContent = state.expanded ? "Thu gọn danh mục" : "Xem tất cả " + PRODUCTS.length + " sản phẩm";
+            more.hidden = !(state.tab === "all" && !state.query && mode === "default" && !Object.values(af).some(x => x.length) && list.length > 10);
+            more.textContent = state.expanded ? "Thu gọn danh mục" : "Xem thêm " + Math.max(list.length - visible.length, 0) + " sản phẩm còn lại";
           }
         }
         $$(".catalog-tab").forEach(b => b.onclick = () => { $$(".catalog-tab").forEach(x => { x.classList.toggle("active", x === b); x.setAttribute("aria-pressed", String(x === b)) }); state.tab = b.dataset.tab; state.expanded = true; syncFilterOptionAvailability(); updateFilterCount(); renderCatalog() }); $("#catalog-search").oninput = e => { state.query = e.target.value.trim(); state.expanded = true; renderCatalog() }; $("#sort").onchange = () => { state.expanded = true; renderCatalog() }; $("#load-more").onclick = () => { state.expanded = !state.expanded; renderCatalog() };
@@ -8563,5 +8635,10 @@ $$('.video-open').forEach(b => {
 
 
     })();</script>
+<script>
+  document.getElementById('products-next')?.addEventListener('click', () => {
+    document.getElementById('product-grid')?.scrollBy({ left: document.getElementById('product-grid').clientWidth * 0.82, behavior: 'smooth' });
+  });
+</script>
 </body>
 </html>
