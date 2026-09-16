@@ -1242,7 +1242,7 @@
 
     @media (max-width:760px) {
       .location-network-v2 {
-        padding: 30px 0;
+        padding: 24px 0;
       }
 
       .location-v2-head {
@@ -6539,7 +6539,7 @@
 
     @media (max-width:767px) {
       .install-process-section {
-        padding: 30px 0 34px;
+        padding: 24px 0 28px;
       }
 
       .install-process-list {
@@ -6596,6 +6596,45 @@
       .case-study-viewport::after,
       .hybrid-decision-table::before,
       .hybrid-decision-table::after { display: none !important; }
+    }
+    @media (max-width: 760px) {
+      .video-layout,
+      .guide-viewport,
+      .location-v2-branch-list,
+      .install-process-list {
+        position: relative;
+      }
+      .video-layout::after,
+      .guide-viewport::after,
+      .location-v2-branch-list::after,
+      .install-process-list::after {
+        content: "Vuốt để xem thêm →";
+        position: absolute;
+        right: 8px;
+        bottom: 4px;
+        z-index: 2;
+        padding: 5px 8px;
+        border-radius: 999px;
+        background: rgba(255,255,255,.94);
+        color: var(--red);
+        font-size: 10px;
+        font-weight: 800;
+        box-shadow: 0 3px 10px rgba(16,19,25,.12);
+        pointer-events: none;
+      }
+      .video-layout,
+      .guide-viewport,
+      .location-v2-branch-list,
+      .install-process-list {
+        margin-bottom: 8px;
+      }
+      #videos .video-layout > article,
+      .guide-viewport > *,
+      .location-v2-branch-list > *,
+      .install-process-list > * {
+        flex-basis: calc(100% - 32px);
+        min-width: calc(100% - 32px);
+      }
     }
     </style>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
